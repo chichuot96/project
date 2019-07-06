@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:500,100,300,700,400);
-
+body{
+  overflow-x: hidden;
+}
+h3{
+  font-size: 4vw;
+}
 #back-gr{
   background-image: url('https://churchsermonseriesideas.com/wp-content/uploads/2013/11/Fresh-Air-Sermon-Series-Idea.jpg');
   background-size: cover;
@@ -14,29 +19,25 @@
 .content{
   position: relative;
   background-color: #ffffff;
-  width:100%;
+
 }
 .carousel-item{
-  width:100%;
-  height: 350px;
+  height: 250px;
   background-size: cover;
-
+  background-position: center;
+  margin-bottom: 30px;
 }
 #s1{
   background-image: url('https://png.pngtree.com/thumb_back/fh260/back_pic/05/07/59/205976bda2ca9bd.jpg');
-  background-size: cover;
 }
 #s2{
   background-image: url('https://png.pngtree.com/thumb_back/fh260/back_pic/05/10/03/74598964bf43a30.jpg');
-  background-size: cover;
 }
 #s3{
   background-image: url('https://cdn.mediamart.vn/Upload/images/quat-dieu-hoa-saiko-AC-9170CL.jpg');
-  background-size: cover;
 }
 #s4{
   background-image:url('http://dieuhoamk.com/profiles/dieuhoamkcom/uploads/attach/1484628108_air-con-at-home.jpg');
-  background-size: cover;
 }
 #space{
   height: 300px;
@@ -44,7 +45,7 @@
 
 }
 .relate{
-  margin-top: 100px;
+  font-size: 2vw;
   -webkit-box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
   -moz-box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
   box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
@@ -56,6 +57,7 @@
 .cate{
   display: inline-block;
   padding: 8px;
+  font-size: 2vw;
 }
 .product{
   padding: 5px;
@@ -109,7 +111,7 @@
   color: #fff;
   background-color: #00ff00;
   width:10vw;
-  border-radius: 0.3em;
+  border-radius: 0.4em;
   padding: 1vw;
   top:5%;
   left: 5%;
@@ -194,10 +196,9 @@ footer h4{
       height: 392px;
   }
   .carousel-item{
-    height:350px;
+    height:300px;
+    margin-bottom: 40px;
   }
-
-
     label.star{
       font-size:10px;
       padding-right: 7px;
@@ -215,16 +216,22 @@ footer h4{
   .name , .info{
     font-size: 1.7vw;
   }
-
+  .relate{
+    font-size: 1.4vw;
   }
   .link{
     font-size: 1vw;
   }
   .carousel-item{
-    height: 400px;
+    height: 350px;
+    margin-bottom: 50px;
   }
-
-
+  h3{
+    font-size: 1.5vw;
+  }
+  .cate{
+    font-size: 1vw;
+  }
   label.star{
     font-size: 15px;
     padding-right: 12px;
@@ -240,9 +247,11 @@ footer h4{
      padding: 0.5vw;
    }
    .carousel-item{
-     height: 500px;
+     height: 450px;
    }
-
+   .link{
+     font-size: 0.8vw;
+   }
    label.star{
      font-size: 20px;
      padding-right: 15px;
