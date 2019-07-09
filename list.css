@@ -191,11 +191,47 @@ footer h4{
   content: "\f005 \f005 \f005 \f005 \f005";
   color: #f8ce0b;
 }
+/* for shopping cart */
+.cart-head{
+  background-image: url("https://png.pngtree.com/thumb_back/fh260/back_pic/05/07/59/205976bda2ca9bd.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 250px;
+}
+.table{
+  text-align: center;
+  font-size: 2vw;
+}
+.btn{
+  display: inline-block;
+}
+.table-img{
+  width:30%;
+}
+.quanti{
+  width:90%;
+  margin-left: 10%;
+  height:4vw;
+}
+.table-quantity .col-6{
+  padding: 0;
+}
+.table-quantity .btn{
+  padding: 0;
+  width:4vw;
+  height: 4vw;
+}
+.table-quantity img{
+  width:2vw;
+}
+@media (min-width: 768px) {
+
+}
 @media (min-width: 576px) {
   #back-gr{
       height: 392px;
   }
-  .carousel-item{
+  .carousel-item , .cart-head{
     height:300px;
     margin-bottom: 40px;
   }
@@ -222,7 +258,7 @@ footer h4{
   .link{
     font-size: 1vw;
   }
-  .carousel-item{
+  .carousel-item , .cart-head{
     height: 350px;
     margin-bottom: 50px;
   }
@@ -236,6 +272,9 @@ footer h4{
     font-size: 15px;
     padding-right: 12px;
   }
+  .table-quantity .btn{
+    padding: 0.7vw;
+  }
 }
  @media (min-width: 992px) {
    #back-gr{
@@ -246,7 +285,7 @@ footer h4{
      width:5vw;
      padding: 0.5vw;
    }
-   .carousel-item{
+   .carousel-item , .cart-head{
      height: 450px;
    }
    .link{

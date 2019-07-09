@@ -11,23 +11,30 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="list.css" >
   <style>
-    .table{
-      text-align: center;
+    .cart-head{
+
+      position: relative;
     }
-    .table-img{
-      width:30%;
-    }
-    .table input[type=text]{
+    .cart-head .ch-link{
+      position: absolute;
+      bottom: 0px;
       width:100%;
-    }
-    .table-quantity img{
-      width:2vw;
+      text-decoration: none;
+      font-size: 2vw;
     }
   </style>
   <title>Document</title>
 </head>
 <body>
 <section>
+  <div class="cart-head">
+
+    <h3>SHOPPING CART</h3>
+    <div class="ch-link">
+      <a href="#">Home</a>
+      <a href="#">Shopping cart</a>
+    </div>
+  </div>
   <div class="container table-responsive">
     <table class="table table-bordered">
       <thead>
@@ -43,21 +50,29 @@
           <td class="table-img"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6175/6175508_sd.jpg" width="80%" alt=""></td>
           <td class="table-name">LG-LW6017R</td>
           <td class="table-quantity">
-            <div class="col-6"><input type="number" name="quantity" min="0"></div>
-            <div class="col-6">
-              <a href="" class="btn btn-success">
-                <img src="https://www.iconsdb.com/icons/preview/white/available-updates-xxl.png" alt="">
-              </a>
-              <a href=""class="btn btn-danger">
-                <img src="https://www.iconsdb.com/icons/preview/white/x-mark-3-xxl.png" alt="">
-              </a>
+            <div class="row">
+              <div class="col-6 q-left"><input class="quanti" type="number" name="quantity" placeholder="1" min="0"></div>
+              <div class="col-6">
+                <a href="" class="btn btn-success">
+                  <img src="https://www.iconsdb.com/icons/preview/white/available-updates-xxl.png" alt="">
+                </a>
+                <a href=""class="btn btn-danger">
+                  <img src="https://www.iconsdb.com/icons/preview/white/x-mark-3-xxl.png" alt="">
+                </a>
+              </div>
             </div>
+
           </td>
           <td class="table-price">$219.99</td>
+        </tr>
+        <tr>
+          <td class="" colspan="3">Total</td>
+          <td id="cart-total"></td>
         </tr>
       </tbody>
     </table>
   </div>
+  <div class=""></div>
 </section>
 <footer >
   <div class="container">
