@@ -40,9 +40,12 @@ h3{
   background-image:url('http://dieuhoamk.com/profiles/dieuhoamkcom/uploads/attach/1484628108_air-con-at-home.jpg');
 }
 #space{
-  height: 300px;
+  padding: 50px;
+  height: 200px;
   display: block;
-
+  position: relative;
+  font-size: 2.3vw;
+  text-align: center;
 }
 .relate{
   font-size: 2vw;
@@ -61,6 +64,7 @@ h3{
 }
 .product{
   padding: 5px;
+  margin-bottom: 1rem;
   position: relative;
   border-radius: 10px;
   -webkit-box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
@@ -224,9 +228,7 @@ footer h4{
 .table-quantity img{
   width:2vw;
 }
-@media (min-width: 768px) {
 
-}
 @media (min-width: 576px) {
   #back-gr{
       height: 392px;
@@ -243,6 +245,9 @@ footer h4{
 @media (min-width: 768px) {
   #back-gr{
       height: 506px;
+  }
+  #space{
+    height:300px;
   }
   .sale{
     font-size: 1.3vw;
