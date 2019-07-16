@@ -49,6 +49,7 @@ h3{
 }
 .relate{
   font-size: 2vw;
+  margin-bottom: 1rem;
   -webkit-box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
   -moz-box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
   box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
@@ -60,7 +61,14 @@ h3{
 .cate{
   display: inline-block;
   padding: 8px;
-  font-size: 2vw;
+  font-size: 2.5vw;
+
+}
+.cate input[type=checkbox]{
+  height: 3vw;
+}
+.cate input[type=number]{
+  width: 100%;
 }
 .product{
   padding: 5px;
@@ -272,6 +280,9 @@ footer h4{
   }
   .cate{
     font-size: 1vw;
+  }
+  .cate input[type=checkbox]{
+    height: 1vw;
   }
   label.star{
     font-size: 15px;

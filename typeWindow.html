@@ -9,7 +9,32 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"> </script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
   <link rel="stylesheet" href="list.css" >
+  <style>
+  .ml11 .text-wrapper {
+    position: relative;
+  }
+  .ml11 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  width: 3px;
+  background-color: #fff;
+  transform-origin: 0 50%;
+}
+.ml11 .line1 {
+  top: 0;
+  left: 0;
+}
+
+.ml11 .letter {
+  display: inline-block;
+
+}
+
+</style>
   <title>Document</title>
 </head>
 <body>
@@ -51,17 +76,6 @@
       </div>
     </div>
     <div class="container ">
-      <div class="row relate">
-        <div class="col-md-6">
-          <img src="" width="100%"alt="">
-        </div>
-        <div class="col-md-6">
-          <p>Window air conditioners are the most common type of air conditioning you see.</p>
-          <p> As you walk down a city street in the summer and look up, you’ll see plenty of these installed in the windows above you.</p>
-          <p>Or worse, but just as common, you’ll be dripped on by their condensation!</p>
-          <p>  This type of air conditioner, normally mounted in a window, has an exhaust system which pushes hot air out the back and sides, while the refrigerant cooling system is pointed indoors. </p>
-        </div>
-      </div>
       <div class="row">
         <div class="col-md-3">
           <div class="category">
@@ -98,8 +112,15 @@
           </div>
         </div>
         <div class="col-md-9">
-          <div class="container">
-            <h1>hellooooooo</h1>
+          <div class="row relate">
+            <div class="col-md-6">
+              <img src="https://amp.businessinsider.com/images/5cdd6a7d021b4c03c07f3ea2-750-563.jpg" width="100%"alt="">
+            </div>
+            <div class="col-md-6">
+              <h3>Window air conditioner</h3>
+              <p>Window air conditioners are the most common type of air conditioning you see.</p>
+              <p>  This type of air conditioner, normally mounted in a window, has an exhaust system which pushes hot air out the back and sides, while the refrigerant cooling system is pointed indoors. </p>
+            </div>
           </div>
           <div class="row container">
             <div class="col-md-4 col-6">
@@ -113,7 +134,14 @@
                   </div>
                 </div>
                 <div class="info">
-                  <a href="#" class="name">Voltas-185DZA</a>
+                  <a href="#" class="name">
+                    <span class="ml11">
+                      <span class="text-wrapper">
+                        <span class="line line1"></span>
+                        <span class="letters">Voltas-185DZA</span>
+                      </span>
+                    </span>
+                  </a>
                   <div class="price">$499.00</div>
                   <div class="star-rate">
                     <div class="star-inner" ></div>
@@ -334,6 +362,12 @@
       $(this).removeClass('act');
     }
   );
+  $('.price').hover(function(){
+      $(this).addClass('shake-rotate');
+    },function(){
+      $(this).removeClass('shake-rotate');
+    }
+  );
 
     function convert(a){
       var percent;
@@ -354,7 +388,45 @@
       y[j].innerHTML='('+Math.floor(Math.random()*800+10)+')';
     }
 </script>
+<script type="text/javascript">
+  $('.product').hover(function(){
 
+    $('.ml11 .letters').each(function(){
+    $(this).html($(this).text().replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>"));
+    });
+
+    anime.timeline({loop: true})
+    .add({
+      targets: '.ml11 .line',
+      scaleY: [0,1],
+      opacity: [0.5,1],
+      easing: "easeOutExpo",
+      duration: 700
+    })
+    .add({
+      targets: '.ml11 .line',
+      translateX: [0,$(".ml11 .letters").width()],
+      easing: "easeOutExpo",
+      duration: 700,
+      delay: 100
+    }).add({
+      targets: '.ml11 .letter',
+      opacity: [0,1],
+      easing: "easeOutExpo",
+      duration: 600,
+      offset: '-=775',
+      delay: function(el, i) {
+        return 34 * (i+1)
+      }
+    }).add({
+      targets: '.ml11',
+      opacity: 0,
+      duration: 1000,
+      easing: "easeOutExpo",
+      delay: 1000
+    });
+  })
+</script>
 </body>
 
 
