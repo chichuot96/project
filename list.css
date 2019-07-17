@@ -48,30 +48,49 @@ h3{
   text-align: center;
 }
 .relate{
-  font-size: 2vw;
+  font-size: 1.5vw;
   margin-bottom: 1rem;
   -webkit-box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
   -moz-box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
   box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
 }
+.relate h3{
+  font-size: 2.5vw;
+}
 .relate img{
-  margin:  5px;
+  margin:  5px auto;
   border-radius: 5px;
+
+}
+.category h3{
+  font-size: 2.6vw;
+}
+.category .col-md-6{
+  padding: 0;
+}
+.category .row{
+  border-bottom: 1px solid #bbb;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 .cate{
   display: inline-block;
-  padding: 8px;
-  font-size: 2.5vw;
-
+  font-size: 2vw;
+  padding: 0.5vw;
+}
+.cate-center{
+  text-align: center;
+  font-size: 2vw;
+}
+.cate-center .fa{
 }
 .cate input[type=checkbox]{
-  height: 3vw;
+  height: 2vw;
 }
 .cate input[type=number]{
   width: 100%;
 }
 .product{
-  padding: 5px;
   margin-bottom: 1rem;
   position: relative;
   border-radius: 10px;
@@ -130,54 +149,61 @@ h3{
   font-size:2vw;
 }
 .name{
-  font-size: 3vw;
+  font-size: 2.5vw;
 }
 .info{
   position: relative;
   color: #00f;
   text-align: center;
-  font-size: 3vw;
+  font-size: 2vw;
 }
 .link{
-  font-size: 1.6vw;
+  font-size: 1.3vw;
   padding: 0;
 }
 footer{
-  padding-top: 50px;
+  padding-top:5vw;
   width:100%;
   text-align: center;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 1.5vw;
   background-color: #ffffff;
+}
+footer .col-3{
+  padding: 0;
 }
 ul{
   margin: 0;
   padding: 0;
 }
 .finfo{
-  margin-top: 30px;
+  margin-top: 3vw;
   border-top: 1px solid #000;
-  padding-top: 50px;
+  padding-top: 5vw;
 
+}
+footer h1{
+  font-size: 4vw;
 }
 footer h4{
   margin-bottom: 40px;
+  font-size: 2vw;
 }
 
 .icon-footer img{
-  width:25px;
-  margin:20px auto 20px auto;
+  width:3vw;
+  margin:2vw auto 2vw auto;
 }
 #div{
-  height:50px;
+  height:5vw;
   border-right: 1px solid #000;
-  margin-bottom: 20px;
+  margin-bottom: 2vw;
 }
 .bor{
   border: 1px solid #000;
   width: 100%;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
   overflow: hidden;
 }
 .star-rate{
@@ -268,8 +294,17 @@ footer h4{
   .relate{
     font-size: 1.4vw;
   }
-  .link{
+  .cate {
     font-size: 1vw;
+  }
+  .cate input[type=checkbox]{
+    height: 1vw;
+  }
+  .category h3{
+    font-size: 2vw;
+  }
+  .link{
+    font-size: 0.8vw;
   }
   .carousel-item , .cart-head{
     height: 350px;
@@ -278,12 +313,8 @@ footer h4{
   h3{
     font-size: 1.5vw;
   }
-  .cate{
-    font-size: 1vw;
-  }
-  .cate input[type=checkbox]{
-    height: 1vw;
-  }
+
+
   label.star{
     font-size: 15px;
     padding-right: 12px;
