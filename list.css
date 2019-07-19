@@ -21,12 +21,12 @@ h3{
   background-color: #ffffff;
 
 }
-.carousel-item{
+/* .carousel-item{
   height: 250px;
   background-size: cover;
   background-position: center;
   margin-bottom: 30px;
-}
+} */
 #s1{
   background-image: url('https://png.pngtree.com/thumb_back/fh260/back_pic/05/07/59/205976bda2ca9bd.jpg');
 }
@@ -93,10 +93,11 @@ h3{
 .product{
   margin-bottom: 1rem;
   position: relative;
-  border-radius: 10px;
   -webkit-box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
   -moz-box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
   box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
+  z-index: 0;
+  text-align: center;
 }
 .product:hover{
   -webkit-box-shadow: 13px 16px 37px -4px rgba(231,166,26,0.39);
@@ -267,7 +268,8 @@ footer h4{
   #back-gr{
       height: 392px;
   }
-  .carousel-item , .cart-head{
+  /* .carousel-item ,  */
+  .cart-head{
     height:300px;
     margin-bottom: 40px;
   }
@@ -306,7 +308,8 @@ footer h4{
   .link{
     font-size: 0.8vw;
   }
-  .carousel-item , .cart-head{
+  /* .carousel-item ,  */
+  .cart-head{
     height: 350px;
     margin-bottom: 50px;
   }
@@ -332,7 +335,8 @@ footer h4{
      width:5vw;
      padding: 0.5vw;
    }
-   .carousel-item , .cart-head{
+   /* .carousel-item ,  */
+   .cart-head{
      height: 450px;
    }
    .link{
