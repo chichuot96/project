@@ -20,7 +20,7 @@ a {
 
 .type-ac .type-img {
   position: relative;
-  z-index: -1;
+  z-index: 0;
 }
 
 .type-ac::before {
@@ -35,6 +35,7 @@ a {
   -webkit-transform: skewX(-45deg);
   -ms-transform: skewX(-45deg);
   transform: skewX(-45deg);
+  z-index: 1;
 }
 
 .type-ac::after {

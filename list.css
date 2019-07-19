@@ -5,7 +5,7 @@ body{
 h3{
   font-size: 4vw;
 }
-#back-gr{
+.back-gr{
   background-image: url('https://churchsermonseriesideas.com/wp-content/uploads/2013/11/Fresh-Air-Sermon-Series-Idea.jpg');
   background-size: cover;
   background-position: center;
@@ -13,13 +13,13 @@ h3{
   top:100px;
   left:0;
   width: 100%;
-  z-index: -1;
+  z-index: -10;
   height: 242px;
 }
 .content{
   position: relative;
   background-color: #ffffff;
-
+  
 }
 /* .carousel-item{
   height: 250px;
@@ -39,7 +39,7 @@ h3{
 #s4{
   background-image:url('http://dieuhoamk.com/profiles/dieuhoamkcom/uploads/attach/1484628108_air-con-at-home.jpg');
 }
-#space{
+.space{
   padding: 50px;
   height: 200px;
   display: block;
@@ -265,7 +265,7 @@ footer h4{
 }
 
 @media (min-width: 576px) {
-  #back-gr{
+  .back-gr{
       height: 392px;
   }
   /* .carousel-item ,  */
@@ -279,10 +279,10 @@ footer h4{
     }
  }
 @media (min-width: 768px) {
-  #back-gr{
+  .back-gr{
       height: 506px;
   }
-  #space{
+  .space{
     height:300px;
   }
   .sale{
@@ -327,7 +327,7 @@ footer h4{
   }
 }
  @media (min-width: 992px) {
-   #back-gr{
+   .back-gr{
        height: 662px;
    }
    .sale{
