@@ -19,7 +19,7 @@ h3{
 .content{
   position: relative;
   background-color: #ffffff;
-  
+
 }
 /* .carousel-item{
   height: 250px;
@@ -93,18 +93,21 @@ h3{
 .product{
   margin-bottom: 1rem;
   position: relative;
-  -webkit-box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
-  -moz-box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
-  box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
+
   z-index: 0;
   text-align: center;
 }
 .product:hover{
+  /* -webkit-box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
+  -moz-box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
+  box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39); */
   -webkit-box-shadow: 13px 16px 37px -4px rgba(231,166,26,0.39);
   -moz-box-shadow: 13px 16px 37px -4px rgba(231,166,26,0.39);
   box-shadow: 13px 16px 37px -4px rgba(231,166,26,0.39);
 }
-
+.image{
+  height:10vw;
+}
 .act .image{
   filter: brightness(70%);
   border-radius: 10px;

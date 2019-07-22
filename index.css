@@ -163,6 +163,12 @@ a {
 #hot-deal a{
   font-size: 2vw;
 }
+.carousel-inner{
+  overflow: inherit;
+}
+#popular{
+  padding-bottom: 4vw;
+}
 #popular .image{
   position: absolute;
   top: 50%;
@@ -173,6 +179,18 @@ a {
 #popular .product{
   margin-bottom: 3vw;
 }
+.carousel-control-prev,.carousel-control-next{
+  background-color: #88f;
+  top:inherit;
+  transform: translateY(100%);
+  bottom: 0;
+  left:50%;
+  height:4vw;
+}
+.carousel-control-prev{
+  transform: translate(-100%,100%);
+}
+
 @media (min-width: 576px) {
   .type-brand span{
     font-size: 4vw;
@@ -191,5 +209,8 @@ a {
   .type-brand a{
     font-size: 1.5vw;
     margin-top: 3vw;
+  }
+  .add-cart{
+    font-size: 1.5vw;
   }
 }
