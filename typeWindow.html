@@ -12,8 +12,58 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
   <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
   <link rel="stylesheet" href="list.css" >
+  <link rel="stylesheet" href="index.css" >
   <style>
+    .type-bg h3{
+      text-align: center;
+      font-size: 4vw;
+      position: absolute;
+      top:9vw;
+      width: 50%;
+      left:25%;
+      background-color: rgb(120,120,255);
+      color: white;
+      mix-blend-mode: multiply;
+      padding: 2vw 0;
+      border-radius: 2vw;
+    }
+    .list-product .image{
+      height:25vw;
 
+    }
+    .list-product .im{
+      padding: 1vw;
+    }
+    .list-product .pagination{
+      position: relative;
+      left:40%;
+      width: 20%;
+      font-size: 2vw;
+      margin-top: 3vw;
+    }
+    .cate .active span::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      animation: animate 2s cubic-bezier(.77,0,.18,1) forwards;
+      transform: translateX(-101%);
+    }
+    .cate span:nth-of-type(2)::after{
+        animation-delay: 1.5s;
+    }
+    @keyframes animate{
+        0% {transform: translateX(-100%)}
+        100% {transform: translateX(101%)}
+    }
+    @media (min-width: 768px) {
+      .list-product .image{
+        height: 22vw;
+      }
+    }
 </style>
   <title>Document</title>
 </head>
@@ -21,27 +71,30 @@
 <section >
   <div class="back-gr">
   </div>
-  <div class="content">
-      <div class="row">
-        <div class="type-bg">
-            <img src="https://amp.businessinsider.com/images/5cdd6a7d021b4c03c07f3ea2-750-563.jpg" width="100%"alt="">
+  <div class="content list-product " >
+    <div class="type-bg">
+        <img src="https://png.pngtree.com/thumb_back/fh260/back_pic/05/10/03/74598964bf43a30.jpg" width="100%"alt="">
+        <h3>Window air conditioner</h3>
+      <div >
+        <div class="container brand-info">
 
-          <div class="col-7">
-            <h3>Window air conditioner</h3>
-            <p>Window air conditioners are the most common type of air conditioning you see.</p>
-            <p>  This type of air conditioner, normally mounted in a window, has an exhaust system which pushes hot air out the back and sides, while the refrigerant cooling system is pointed indoors. </p>
-          </div>
+          <p>Window air conditioners are the most common type of air conditioning you see.</p>
+          <p>  This type of air conditioner, normally mounted in a window, has an exhaust system which pushes hot air out the back and sides, while the refrigerant cooling system is pointed indoors. </p>
         </div>
+      </div>
+    </div>
+      <div class="row">
+
         <div class="col-3">
           <div class="category container">
             <h3 >Brand</h3>
             <div class="row">
-              <div class="cate col-md-6"><a href="#"><input type="checkbox" name="" value=""> FRIGIDAIRE</a></div>
-              <div class="cate col-md-6"><a href="#"><input type="checkbox" name="" value=""> LG</a> </div>
-              <div class="cate col-md-6"><a href="#"><input type="checkbox" name="" value=""> KEYSTONE</a> </div>
-              <div class="cate col-md-6"><a href="#"><input type="checkbox" name="" value=""> HONEYWELL</a></div>
-              <div class="cate col-md-6"><a href="#"><input type="checkbox" name="" value=""> WHIRLPOOL</a></div>
-              <div class="cate col-md-6"><a href="#"><input type="checkbox" name="" value=""> AMANA</a></div>
+              <div class="cate col-12"><a href="#"><input type="checkbox" name="" value=""> <span>FRIGIDAIRE</span></a></div>
+              <div class="cate col-12"><a href="#"><input type="checkbox" name="" value=""> <span>LG</span></a> </div>
+              <div class="cate col-12"><a href="#"><input type="checkbox" name="" value=""><span> KEYSTONE</span></a> </div>
+              <div class="cate col-12"><a href="#"><input type="checkbox" name="" value=""><span> HONEYWELL</span></a></div>
+              <div class="cate col-12"><a href="#"><input type="checkbox" name="" value=""> <span>WHIRLPOOL</span></a></div>
+              <div class="cate col-12"><a href="#"><input type="checkbox" name="" value=""><span> AMANA</span></a></div>
             </div>
             <h3>Price</h3>
             <div class="row">
@@ -49,19 +102,19 @@
               <div class="cate col-2 cate-center">To</div>
               <div class="cate col-4"> <input type="number">  </div>
               <div class="cate col-2 cate-center"><a href="#" class="fa fa-angle-right btn "></a></div>
-              <div class="cate col-md-6"><a href="#"><input type="checkbox" name="" value=""> $100-$149.99</a> </div>
-              <div class="cate col-md-6"><a href="#"><input type="checkbox" name="" value=""> $150-$199.99</a>  </div>
-              <div class="cate col-md-6"><a href="#"><input type="checkbox" name="" value=""> $200-$249.99</a>  </div>
-              <div class="cate col-md-6"><a href="#"><input type="checkbox" name="" value=""> $250-$499.99</a>  </div>
-              <div class="cate col-md-6"><a href="#"><input type="checkbox" name="" value=""> $500-$749.99</a>  </div>
-              <div class="cate col-md-6"><a href="#"><input type="checkbox" name="" value=""> $750-$999.99</a>  </div>
+              <div class="cate col-12"><a href="#"><input type="checkbox" name="" value=""> <span>$100-$149.99</span></a> </div>
+              <div class="cate col-12"><a href="#"><input type="checkbox" name="" value=""><span> $150-$199.99</span></a>  </div>
+              <div class="cate col-12"><a href="#"><input type="checkbox" name="" value=""><span> $200-$249.99</span></a>  </div>
+              <div class="cate col-12"><a href="#"><input type="checkbox" name="" value=""> <span>$250-$499.99</span></a>  </div>
+              <div class="cate col-12"><a href="#"><input type="checkbox" name="" value=""><span> $500-$749.99</span></a>  </div>
+              <div class="cate col-12"><a href="#"><input type="checkbox" name="" value=""> <span>$750-$999.99</span></a>  </div>
             </div>
             <h3>Recommended room size</h3>
             <div class="row">
-              <div class="cate col-md-6"><a href="#"><input type="checkbox" name="" value="">100-199 sq ft</a> </div>
-              <div class="cate col-md-6"><a href="#"><input type="checkbox" name="" value="">200-299 sq ft</a> </div>
-              <div class="cate col-md-6"><a href="#"><input type="checkbox" name="" value="">300-399 sq ft</a> </div>
-              <div class="cate col-md-6"><a href="#"><input type="checkbox" name="" value="">400 sq ft or more</a> </div>
+              <div class="cate col-12"><a href="#"><input type="checkbox" name="" value=""><span>100-199 sq ft</span></a> </div>
+              <div class="cate col-12"><a href="#"><input type="checkbox" name="" value=""><span>200-299 sq ft</span></a> </div>
+              <div class="cate col-12"><a href="#"><input type="checkbox" name="" value=""><span>300-399 sq ft</span></a> </div>
+              <div class="cate col-12"><a href="#"><input type="checkbox" name="" value=""><span>400 sq ft or more</span></a> </div>
             </div>
             <h3></h3>
           </div>
@@ -73,9 +126,9 @@
                 <div class="im">
                   <img class="image" src="https://m.media-amazon.com/images/I/81Zu8EggjjL._AC_UL436_.jpg" width="100%" alt="">
                   <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
+
                   <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
+                  <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
                   </div>
                 </div>
                 <div class="info">
@@ -101,6 +154,9 @@
                   <a href="#" class="btn btn-info link">Window</a>
                   <a href="#" class="btn btn-danger link"> Heat & cool</a>
                 </div>
+                <div class="add-cart">
+                  <a href="#" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+                </div>
               </div>
             </div>
             <div class="col-md-4 col-6">
@@ -108,9 +164,9 @@
                 <div class="im">
                   <img class="image" src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6175/6175508_sd.jpg" width="100%" alt="">
                   <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
+
                   <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
+                  <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
                   </div>
                 </div>
                 <div class="info">
@@ -129,6 +185,9 @@
                   <a href="#" class="btn btn-info link">Window</a>
                   <a href="#" class="btn btn-danger link"> Heat & cool</a>
                 </div>
+                <div class="add-cart">
+                  <a href="#" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+                </div>
               </div>
             </div>
             <div class="col-md-4 col-6">
@@ -136,9 +195,9 @@
                 <div class="im">
                   <img class="image" src="https://m.media-amazon.com/images/I/7166Yc3Ca9L._AC_UL436_.jpg" width="100%" alt="">
                   <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
+
                   <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
+                  <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
                   </div>
                 </div>
                 <div class="info">
@@ -158,6 +217,9 @@
                   <a href="#" class="btn btn-info link">Window</a>
                   <a href="#" class="btn btn-success link">Cool only</a>
                 </div>
+                <div class="add-cart">
+                  <a href="#" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+                </div>
               </div>
             </div>
             <div class="col-md-4 col-6">
@@ -165,9 +227,9 @@
                 <div class="im">
                   <img class="image" src="https://m.media-amazon.com/images/I/71BD6nekZ-L._AC_UL436_.jpg" width="100%" alt="">
                   <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
+
                   <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
+                  <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
                   </div>
                 </div>
                 <div class="info">
@@ -186,6 +248,9 @@
                   <a href="#" class="btn btn-info link">Window</a>
                   <a href="#" class="btn btn-danger link"> Heat & cool</a>
                 </div>
+                <div class="add-cart">
+                  <a href="#" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+                </div>
               </div>
             </div>
             <div class="col-md-4 col-6">
@@ -193,9 +258,9 @@
                 <div class="im">
                   <img class="image" src="https://image.made-in-china.com/202f0j00rmaTybAqlNkI/R410A-on-off-Wall-Split-Type-Air-Conditioner.jpg" width="100%" alt="">
                   <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
+
                   <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
+                  <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
                   </div>
                 </div>
                 <div class="info">
@@ -215,6 +280,9 @@
                   <a href="#" class="btn btn-info link">Window</a>
                   <a href="#" class="btn btn-danger link"> Heat & cool</a>
                 </div>
+                <div class="add-cart">
+                  <a href="#" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+                </div>
               </div>
             </div>
             <div class="col-md-4 col-6">
@@ -222,9 +290,9 @@
                 <div class="im">
                   <img class="image" src="https://image.made-in-china.com/202f0j00rmaTybAqlNkI/R410A-on-off-Wall-Split-Type-Air-Conditioner.jpg" width="100%" alt="">
                   <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
+
                   <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
+                  <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
                   </div>
                 </div>
                 <div class="info">
@@ -243,13 +311,24 @@
                   <a href="#" class="btn btn-info link">R-410A</a>
                   <a href="#" class="btn btn-info link">Window</a>
                   <a href="#" class="btn btn-danger link"> Heat & cool</a>
+                </div>
+                <div class="add-cart">
+                  <a href="#" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <ul class="pagination">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
   </div>
+
   <div class="space">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem excepturi voluptates itaque optio quia, architecto facilis doloribus magnam. Voluptas veniam, corporis est omnis tempore corrupti, laboriosam porro accusantium ab totam.</p>
     <a href="#" class="btn btn-info"> about us</a>

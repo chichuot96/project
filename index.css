@@ -68,8 +68,12 @@ a {
   bottom: 1px;
   background-color: #fff;
   width: 100%;
-  font-size: 1.5vw;
+
 }
+.add-cart .btn{
+  font-size: 2vw;
+}
+
 .product:hover .add-cart{
   display: block;
   z-index: 11;
@@ -175,9 +179,13 @@ a {
   transform: translateY(-50%);
   width: 100%;
   left:0;
+  height: auto;
 }
-#popular .product{
+#popular .product, .list-product .product{
   margin-bottom: 3vw;
+}
+#popular .col-6{
+  padding: 0;
 }
 .carousel-control-prev,.carousel-control-next{
   background-color: #88f;
@@ -210,7 +218,7 @@ a {
     font-size: 1.5vw;
     margin-top: 3vw;
   }
-  .add-cart{
-    font-size: 1.5vw;
+  .add-cart .btn{
+    font-size: 1vw;
   }
 }

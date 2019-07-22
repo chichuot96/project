@@ -10,7 +10,7 @@ h3{
   background-size: cover;
   background-position: center;
   position: fixed;
-  top:100px;
+  bottom:100px;
   left:0;
   width: 100%;
   z-index: -10;
@@ -74,9 +74,13 @@ h3{
   padding-bottom: 10px;
 }
 .cate{
-  display: inline-block;
+  display:block;
   font-size: 2vw;
   padding: 0.5vw;
+  position: relative;
+  overflow: hidden;
+  line-height: 1.2;
+
 }
 .cate-center{
   text-align: center;
@@ -105,9 +109,7 @@ h3{
   -moz-box-shadow: 13px 16px 37px -4px rgba(231,166,26,0.39);
   box-shadow: 13px 16px 37px -4px rgba(231,166,26,0.39);
 }
-.image{
-  height:10vw;
-}
+
 .act .image{
   filter: brightness(70%);
   border-radius: 10px;
