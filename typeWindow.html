@@ -41,27 +41,10 @@
       font-size: 2vw;
       margin-top: 3vw;
     }
-    .cate .active span::after{
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      background: white;
-      animation: animate 2s cubic-bezier(.77,0,.18,1) forwards;
-      transform: translateX(-101%);
-    }
-    .cate span:nth-of-type(2)::after{
-        animation-delay: 1.5s;
-    }
-    @keyframes animate{
-        0% {transform: translateX(-100%)}
-        100% {transform: translateX(101%)}
-    }
+
     @media (min-width: 768px) {
       .list-product .image{
-        height: 22vw;
+        height: 20vw;
       }
     }
 </style>
@@ -132,14 +115,7 @@
                   </div>
                 </div>
                 <div class="info">
-                  <a href="#" class="name">
-                    <span class="ml11">
-                      <span class="text-wrapper">
-                        <span class="line line1"></span>
-                        <span class="letters">Voltas-185DZA</span>
-                      </span>
-                    </span>
-                  </a>
+                  <a href="#" class="name">Voltas-185DZA</a>
                   <div class="price">$499.00</div>
                   <div class="star-rate">
                     <div class="star-inner" ></div>

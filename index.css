@@ -4,7 +4,9 @@ a {
   text-decoration: none;
   color: #000;
 }
-
+.col-5, .col-7{
+  padding: 0;
+}
 .brand {
   position: relative;
 }
@@ -55,11 +57,24 @@ a {
 .slick-track,.list-trend{
   padding-bottom: 2vw;
 }
+.trend .col-4{
+  padding: 0;
+}
+.trend .image{
+  height:20vw;
+  object-fit: cover;
+  object-position: center;
+}
 .product{
   background-color: #fff;
 }
 .new-product{
   background-color: #EEF5F9;
+}
+.new-product .image{
+  height:12vw;
+  object-fit: cover;
+  object-position: center;
 }
 .add-cart{
   display: none;
@@ -68,16 +83,23 @@ a {
   bottom: 1px;
   background-color: #fff;
   width: 100%;
+  padding: 0;
 
 }
 .add-cart .btn{
   font-size: 2vw;
+  padding: 0;
 }
 
 .product:hover .add-cart{
   display: block;
   z-index: 11;
   transform: translateY(100%);
+}
+.add-cart :hover{
+  font-size: 2.3vw;
+  background-color: #2f2;
+  transition: 1s;
 }
 .add-cart a{
   width:100%;
@@ -121,10 +143,10 @@ a {
   width: 100%;
 }
 .info{
-  font-size: 1.4vw !important;
+  font-size: 1.4vw ;
 }
 .name{
-  font-size: 2vw !important;
+  font-size: 2vw;
 }
 .brand{
   line-height: 1;
@@ -179,7 +201,9 @@ a {
   transform: translateY(-50%);
   width: 100%;
   left:0;
-  height: auto;
+  height: 14vw;
+  object-fit: cover;
+  object-position: center;
 }
 #popular .product, .list-product .product{
   margin-bottom: 3vw;
@@ -206,7 +230,7 @@ a {
 }
 @media (min-width: 768px) {
   .name ,.info{
-    font-size: 1vw !important;
+    font-size: 1vw ;
   }
   .type-brand span{
     font-size: 2vw;
@@ -220,5 +244,17 @@ a {
   }
   .add-cart .btn{
     font-size: 1vw;
+  }
+  .add-cart :hover{
+    font-size: 1.3vw;
+  }
+  .new-product .image{
+    height:9vw;
+  }
+  .trend .image{
+    height:12vw;
+  }
+  #popular .image{
+    height: 7vw;
   }
 }

@@ -5,6 +5,9 @@ body{
 h3{
   font-size: 4vw;
 }
+span{
+  font-size: 2.5vw;
+}
 .back-gr{
   background-image: url('https://churchsermonseriesideas.com/wp-content/uploads/2013/11/Fresh-Air-Sermon-Series-Idea.jpg');
   background-size: cover;
@@ -40,8 +43,8 @@ h3{
   background-image:url('http://dieuhoamk.com/profiles/dieuhoamkcom/uploads/attach/1484628108_air-con-at-home.jpg');
 }
 .space{
-  padding: 50px;
-  height: 200px;
+  padding: 5vw;
+  height: 30vw;
   display: block;
   position: relative;
   font-size: 2.3vw;
@@ -78,16 +81,20 @@ h3{
   font-size: 2vw;
   padding: 0.5vw;
   position: relative;
-  overflow: hidden;
-  line-height: 1.2;
+  height: 4vw;
 
 }
 .cate-center{
   text-align: center;
   font-size: 2vw;
 }
-.cate-center .fa{
+.cate a:hover {
+  text-decoration: none;
+  color: #44f;
+  font-size: 2.5vw;
+  transition: 0.3s;
 }
+
 .cate input[type=checkbox]{
   height: 2vw;
 }
@@ -101,13 +108,16 @@ h3{
   z-index: 0;
   text-align: center;
 }
+.list-product .product{
+  -webkit-box-shadow:1vw 1.2vw 3.4vw -0.2vw  rgba(0,85,170,0.39);
+  -moz-box-shadow:1vw 1.2vw 3.4vw -0.2vw  rgba(0,85,170,0.39);
+  box-shadow:1vw 1.2vw 3.4vw -0.2vw rgba(0,85,170,0.39);
+}
 .product:hover{
-  /* -webkit-box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
-  -moz-box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39);
-  box-shadow: 13px 16px 37px -4px rgba(0,85,170,0.39); */
-  -webkit-box-shadow: 13px 16px 37px -4px rgba(231,166,26,0.39);
-  -moz-box-shadow: 13px 16px 37px -4px rgba(231,166,26,0.39);
-  box-shadow: 13px 16px 37px -4px rgba(231,166,26,0.39);
+
+  -webkit-box-shadow: 1vw 1.2vw 3.4vw -0.2vw rgba(231,166,26,0.39);
+  -moz-box-shadow: 1vw 1.2vw 3.4vw -0.2vw  rgba(231,166,26,0.39);
+  box-shadow: 1vw 1.2vw 3.4vw -0.2vw  rgba(231,166,26,0.39);
 }
 
 .act .image{
@@ -154,10 +164,14 @@ h3{
   left: 5%;
   font-size:2vw;
 }
-.name{
+.list-product .name{
   font-size: 2.5vw;
+  height: 5vw;
 }
-.info{
+.name:hover{
+  text-decoration: none;
+}
+.list-product .info{
   position: relative;
   color: #00f;
   text-align: center;
@@ -165,7 +179,12 @@ h3{
 }
 .link{
   font-size: 1.3vw;
-  padding: 0;
+  padding: 0.3vw;
+  height: 3vw;
+}
+.link:hover{
+  font-size: 1.5vw;
+  padding: 0 0.1vw;
 }
 footer{
   padding-top:5vw;
@@ -287,23 +306,19 @@ footer h4{
   .back-gr{
       height: 506px;
   }
-  .space{
-    height:300px;
-  }
+
   .sale{
     font-size: 1.3vw;
     width:6vw;
     padding: 0.4vw;
   }
-  .name , .info{
-    font-size: 1.7vw;
+  .list-product .name , .list-product .info{
+    font-size: 2vw;
   }
   .relate{
     font-size: 1.4vw;
   }
-  .cate {
-    font-size: 1vw;
-  }
+
   .cate input[type=checkbox]{
     height: 1vw;
   }
@@ -312,14 +327,24 @@ footer h4{
   }
   .link{
     font-size: 0.8vw;
+    padding: 0.1vw;
+    height: 1.7vw;
   }
+  .link:hover{
+    font-size: 1vw;
+    padding: 0;
+  }
+
   /* .carousel-item ,  */
   .cart-head{
     height: 350px;
     margin-bottom: 50px;
   }
   h3{
-    font-size: 1.5vw;
+    font-size: 2.5vw;
+  }
+  span{
+    font-size: 1.7vw;
   }
 
 
@@ -344,9 +369,7 @@ footer h4{
    .cart-head{
      height: 450px;
    }
-   .link{
-     font-size: 0.8vw;
-   }
+
    label.star{
      font-size: 20px;
      padding-right: 15px;
