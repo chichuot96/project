@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title></title>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick-theme.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.0/slick/slick.min.js"></script>
+  <link rel="stylesheet" href="css/detail.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">LOGO HERE</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse row" id="navbarSupportedContent">
+        <div class="col-md-2">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Brands
+          </a>
+          <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownPortfolio">
+            <a class="dropdown-item" href="/event/typeEvent?type=Music">Samsung</a>
+            <a class="dropdown-item" href="/event/typeEvent?type=Film">LG</a>
+            <a class="dropdown-item" href="/event/typeEvent?type=Exhibition">Daikin</a>
+            <a class="dropdown-item" href="/event/typeEvent?type=Seminar">Panasonic</a>
+            <a class="dropdown-item" href="/event/typeEvent?type=Other">Other ...</a>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <form>
+            <select class="input-select">
+              <option value="0">Brands</option>
+              <option value="1">Category 01</option>
+              <option value="1">Category 02</option>
+            </select>
+            <input class="input" placeholder="Search here">
+            <button class="search-btn">Search</button>
+          </form>
+        </div>
+        <div class="col-md-3" style="text-align: center">
+          <div class="row">
+            <div class="col-6">
+              <a href="#">
+                <div class="icons">
+                  <i class="far fa-heart"></i>
+                </div>
+                <span>
+                  Your love
+                </span>
+              </a>
+            </div>
+            <div class="col-6">
+              <a href="#">
+                <div class="icons">
+                  <i class="fas fa-shopping-basket"></i>
+                </div>
+                <span>
+                  You bought
+                </span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+<section>
+  <div class="row" id="name-product">
+    <div class="col-3">
+      Brand name
+    </div>
+    <div class="col-2">
+      <i class="fas fa-angle-right" style="font-size: 30px"></i>
+    </div>
+    <div class="col-3" >
+      Name of product
+    </div>
+
+  </div>
+  <div class="container" id="main">
+    <div class="row" style="padding: 15px 0">
+      <div class="col-lg-4 col-5">
+        <div class="card h-100">
+          <div>
+            <img class="card-img-top" height="100%" style="overflow: hidden" id="showpic" src="">
+          </div>
+          <div class="card-footer">
+            <div class="row" style="text-align: center">
+              <div class="col-3">
+                <a href="#" id="left"><i class="fas fa-angle-double-left"></i></a>
+              </div>
+              <div class="col-6" id="slide">
+              </div>
+              <div class="col-3">
+                <a href="#" id="right"><i class="fas fa-angle-double-right"></i></a>
+              </div>
+            </div>
+
+            <div class="row" id="morepic">
+              <div class="col-3">
+                <a href="#"><img class="pics" id="1" src="https://image.made-in-china.com/2f0j00PdeTRBvHkjcA/Portable-Air-Conditioner-with-Chilled-Water-Swamp-Air-Cooler-Fan-Rental-and-Sale.jpg" width="100%" alt=""></a>
+              </div>
+              <div class="col-3">
+                <a href="#"><img class="pics" id="2" src="https://cdn.mos.cms.futurecdn.net/TZAH6ZQZos26YsVAKzkFvT-480-80.jpg" width="100%" alt=""></a>
+              </div>
+              <div class="col-3">
+                <a href="#"><img class="pics" id="3" src="https://www.inventoraircondition.gr/images/blog/FAQ/ti-einai-ta-klimatistika-eco-design.jpg" width="100%" alt=""></a>
+              </div>
+              <div class="col-3">
+                <a href="#"><img class="pics" id="4" src="https://www.inventoraircondition.gr/images/blog/FAQ/ti-einai-o-ionistis-sta-klimatistika-kai-giati-na-epilekso-klimatistiko-me-ionisti.jpg" width="100%" alt=""></a>
+              </div>
+              <div class="col-3">
+                <a href="#"><img class="pics" id="5" src="https://www.courts.com.sg/media/wysiwyg/Landing_pages/Air_con/J374427_COURTS_June_Website_Aircon_Content_Box_600Px_W_X400Px_H__V13.jpg" width="100%" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-7" id="mid">
+        <div class="info"style="font-size:3vw;" >
+          <p style="font-size:4vw;">Name of product</p>
+          <div class="row">
+            <div class="price col-6" style="text-align: center;font-size:3vw;">
+              <h5>$499.00</h5>
+            </div>
+            <div class="star-rate">
+              <div class="star-inner"></div>
+            </div>
+            <div class="count" style="font-size: 10px"></div>
+          </div>
+          <div style="border-top: solid #e4e7ed 1px;">
+            <h6>Size:</h6>
+            <div class="row pickup">
+              <a href="#"><input type="button" name="" value="9.000 W" class="btn btn-info btn-sm" style="font-size: 0.6em"></a>
+              <a href="#"><input type="button" name="" value="9.000 W" class="btn btn-info btn-sm" style="font-size: 0.6em"></a>
+              <a href="#"><input type="button" name="" value="9.000 W" class="btn btn-info btn-sm" style="font-size: 0.6em"></a>
+            </div>
+          </div>
+          <div>
+            <h6>Color</h6>
+            <div class="row pickup">
+              <a href="#"><input type="button" name="" value="9.000 W" class="btn btn-info btn-sm" style="font-size: 0.6em"></a>
+              <a href="#"><input type="button" name="" value="9.000 W" class="btn btn-info btn-sm" style="font-size: 0.6em"></a>
+              <a href="#"><input type="button" name="" value="9.000 W" class="btn btn-info btn-sm" style="font-size: 0.6em"></a>
+            </div>
+          </div>
+          <div class="buy">
+            <a href="#" class="btn btn-danger row" style="width: 500%">BUY</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+
+          </div>
+          <div class="col-6">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <h5>The Best Smallest Portable Air Conditioner Units</h5>
+        <p>We have proudly placed the Haier HPC12XCR at the first spot based on its height, weight, and general user experience.This model is slightly shorter than the Haier, although it weighs five pounds heavier.</p>
+      </div>
+
+    </div>
+    <div class="row" style="border-top: solid #e4e7ed 1px">
+      <h3 style="margin-left: 1em">About This Item</h3>
+      <p class="col-12"><strong>We aim to show you accurate product information.</strong> Manufacturers, suppliers and others provide what you see here, and we have not verified it. See our disclaimer
+        Don't sweat the heat this summer! With the GE 115 Volt Electronic Room Air Conditioner, you'll have all the cooling power you need to keep your space just the right temperature. The GE AEW05LY 115 Volt Electronic Room Air Conditioner delivers
+        5000 BTUS to cool small rooms up to 150 sq. ft. and features 3 cooling speeds and 3 fan speeds for customizable comfort just the way you like it. With the included EZ mount window installation kit, you'll be able to cool down your room in no
+        time. Additional features include a one touch lift-out filter for easy cleaning, an electronic thermostat, 24-Hour On/Off Timer and remote control. With the GE 115 Volt Electronic Room Air Conditioner, powerful and efficient cooling is yours
+        to command.</p>
+      <ul>
+        <li>Delivers 5,000 BTUs to cool small rooms up to 150 sq ft</li>
+        <li>Easy Mount window installation kit included.</li>
+        <li>Easy to operate controls with a digital thermostat</li>
+        <li>Maximum Cool - 2-way air direction, 3 cooling speeds & 3 fan speeds</li>
+        <li>Easy to clean air filter, recommended to clean every 30 days for best performance</li>
+        <li>Easy to operate digital controls with remote control</li>
+        <li>Sleep mode - Designed to allow you to sleep more comfortably by increasing the temperature throughout the night</li>
+        <li>Fixed chassis for window install only, Fits windows 23"- 38" wide, minimum height 12 1/2"</li>
+        <li>115 Volt Outlet Type</li>
+      </ul>
+
+    </div>
+  </div>
+</section>
+<section>
+
+</section>
+  <script type="text/javascript">
+    var cnt = 1;
+    if (cnt == 1) {
+      $('#showpic').attr('src', $('#1').attr('src'));
+      $('#1').css({
+        'border': 'solid #00e6e6 2px',
+        'border-radius': '5px'
+      });
+    }
+    $('.pics').click(function() {
+      cnt = $(this).attr('id');
+      $('.pics').css('border', 'none');
+      $(this).css({
+        'border': 'solid #00e6e6 2px',
+        'border-radius': '5px'
+      });
+      $('#showpic').attr('src', $(this).attr('src'));
+    });
+    $('#left').click(function() {
+      if (cnt != 1) {
+        cnt--;
+        if (cnt == 1) {
+          $('#showpic').attr('src', $('#1').attr('src'));
+          $('.pics').css('border', 'none');
+          $('#1').css({
+            'border': 'solid #00e6e6 2px',
+            'border-radius': '5px'
+          });
+        } else if (cnt == 2) {
+          $('#showpic').attr('src', $('#2').attr('src'));
+          $('.pics').css('border', 'none');
+          $('#2').css({
+            'border': 'solid #00e6e6 2px',
+            'border-radius': '5px'
+          });
+        } else if (cnt == 3) {
+          $('#showpic').attr('src', $('#3').attr('src'));
+          $('.pics').css('border', 'none');
+          $('#3').css({
+            'border': 'solid #00e6e6 2px',
+            'border-radius': '5px'
+          });
+        } else if (cnt == 4) {
+          $('#showpic').attr('src', $('#4').attr('src'));
+          $('.pics').css('border', 'none');
+          $('#4').css({
+            'border': 'solid #00e6e6 2px',
+            'border-radius': '5px'
+          });
+        }
+
+      }
+    })
+    $('#right').click(function() {
+      if (cnt != 5) {
+        cnt++;
+        if (cnt == 2) {
+          $('#showpic').attr('src', $('#2').attr('src'));
+          $('.pics').css('border', 'none');
+          $('#2').css({
+            'border': 'solid #00e6e6 2px',
+            'border-radius': '5px'
+          });
+        } else if (cnt == 3) {
+          $('#showpic').attr('src', $('#3').attr('src'));
+          $('.pics').css('border', 'none');
+          $('#3').css({
+            'border': 'solid #00e6e6 2px',
+            'border-radius': '5px'
+          });
+        } else if (cnt == 4) {
+          $('#showpic').attr('src', $('#4').attr('src'));
+          $('.pics').css('border', 'none');
+          $('#4').css({
+            'border': 'solid #00e6e6 2px',
+            'border-radius': '5px'
+          });
+        } else if (cnt == 5) {
+          $('#showpic').attr('src', $('#5').attr('src'));
+          $('.pics').css('border', 'none');
+          $('#5').css({
+            'border': 'solid #00e6e6 2px',
+            'border-radius': '5px'
+          });
+        }
+      }
+    })
+  </script>
+  <script type="text/javascript">
+    function convert(a) {
+      var percent;
+      if (a < 5) {
+        percent = [a / 5] * 100;
+      } else {
+        percent = 100;
+      }
+      var round = `${(percent)}%`;
+      return round;
+    };
+    var x = $('.star-inner');
+
+    x[0].style.width = convert(Math.random() * 3 + 2);
+
+    var y = $('.count');
+
+    y[0].innerHTML = '(' + Math.floor(Math.random() * 800 + 10) + ')';
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
