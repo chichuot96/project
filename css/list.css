@@ -186,51 +186,7 @@ span{
   font-size: 1.5vw;
   padding: 0 0.1vw;
 }
-footer{
-  padding-top:5vw;
-  width:100%;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1.5vw;
-  background-color: #ffffff;
-}
-footer .col-3{
-  padding: 0;
-}
-ul{
-  margin: 0;
-  padding: 0;
-}
-.finfo{
-  margin-top: 3vw;
-  border-top: 1px solid #000;
-  padding-top: 5vw;
 
-}
-footer h1{
-  font-size: 4vw;
-}
-footer h4{
-  margin-bottom: 40px;
-  font-size: 2vw;
-}
-
-.icon-footer img{
-  width:3vw;
-  margin:2vw auto 2vw auto;
-}
-#div{
-  height:5vw;
-  border-right: 1px solid #000;
-  margin-bottom: 2vw;
-}
-.bor{
-  border: 1px solid #000;
-  width: 100%;
-  padding-top: 1vw;
-  padding-bottom: 1vw;
-  overflow: hidden;
-}
 .star-rate{
   position: relative;
   display: inline-block;
@@ -286,6 +242,39 @@ footer h4{
 }
 .table-quantity img{
   width:2vw;
+}
+.type-bg h3{
+  text-align: center;
+  font-size: 4vw;
+  position: absolute;
+  top:9vw;
+  width: 50%;
+  left:25%;
+  background-color: rgb(120,120,255);
+  color: white;
+  mix-blend-mode: multiply;
+  padding: 2vw 0;
+  border-radius: 2vw;
+}
+.list-product .image{
+  height:25vw;
+
+}
+.list-product .im{
+  padding: 1vw;
+}
+.list-product .pagination{
+  position: relative;
+  left:40%;
+  width: 20%;
+  font-size: 2vw;
+  margin-top: 3vw;
+}
+
+@media (min-width: 768px) {
+  .list-product .image{
+    height: 20vw;
+  }
 }
 
 @media (min-width: 576px) {

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" >
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style media="screen">
+  .navbar{
+    background-image: linear-gradient(280deg, #60DAF5, #e6ffff);
+    padding: 1em 1em;
+
+  }
+  a{
+    color: #000;
+  }
+    .input{
+      height: 40px;
+      padding: 0 15px;
+      border: 1px solid #e4e7ed;
+      background-color: #fff;
+      width: 100%
+    }
+
+    .input-select {
+      padding: 0 15px;
+      background: #fff;
+      border: 1px solid #e4e7ed;
+      height: 40px
+    }
+    form {
+      position: relative
+    }
+
+    form .input-select {
+      margin-right: -5px;
+      width: 110px;
+      border-radius: 40px 0 0 40px;
+    }
+
+    form .input {
+      width: calc(100% - 260px);
+      margin-right: -4px;
+    }
+
+    form .search-btn {
+      height: 40px;
+      width: 100px;
+      background: #A9F5E1;
+      color: #fff;
+      font-weight: 700;
+      border: none;
+      border-radius: 0 40px 40px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">LOGO HERE</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse row" id="navbarSupportedContent">
+        <div class="col-md-2">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Menu
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+        <div class="col-md-7">
+          <form>
+            <select class="input-select">
+              <option value="0">Brands</option>
+              <option value="1">Samsung</option>
+              <option value="1">LG</option>
+              <option value="1">Daikin</option>
+              <option value="1">Panasonic</option>
+              <option value="1">Voltas</option>
+              <option value="1">Other...</option>
+            </select>
+            <input class="input" placeholder="Search here">
+            <button class="search-btn">Search</button>
+          </form>
+        </div>
+        <div class="col-md-3" style="text-align: center">
+          <div class="row">
+            <div class="col-6">
+              <a href="#">
+                <div class="icons">
+                  <i class="far fa-heart"></i>
+                </div>
+                <span>
+                  Your love
+                </span>
+              </a>
+            </div>
+            <div class="col-6">
+              <a href="#">
+                <div class="icons">
+                  <i class="fas fa-shopping-basket"></i>
+                </div>
+                <span>
+                  You bought
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

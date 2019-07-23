@@ -6,17 +6,76 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="css\flexboxgrid.css">
+  <!-- <link rel="stylesheet" href="css\flexboxgrid.css"> -->
   <link rel="stylesheet" href="css\login.css">
+  <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
   <script type="text/javascript" src="js\sidenav.js"></script>
 </head>
 <body>
     <section id="section1">
-        <div class="container-fluid" id="headNav">
-          <div id="HeadLeft" class="float-left"><a href="">LOGO</a></div>
-          <div class="float-right" ><a href="" sty>Return to cart</a></div>
-      </div>
+      <nav class="navbar navbar-expand-md navbar-light">
+        <div class="container">
+          <a class="navbar-brand" href="#">LOGO HERE</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse row" id="navbarSupportedContent">
+            <div class="col-md-2">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Menu
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </div>
+            <div class="col-md-7">
+              <form>
+                <select class="input-select">
+                  <option value="0">Brands</option>
+                  <option value="1">Samsung</option>
+                  <option value="1">LG</option>
+                  <option value="1">Daikin</option>
+                  <option value="1">Panasonic</option>
+                  <option value="1">Voltas</option>
+                  <option value="1">Other...</option>
+                </select>
+                <input class="input" placeholder="Search here">
+                <button class="search-btn">Search</button>
+              </form>
+            </div>
+            <div class="col-md-3" style="text-align: center">
+              <div class="row">
+                <div class="col-6">
+                  <a href="#">
+                    <div class="icons">
+                      <i class="far fa-heart"></i>
+                    </div>
+                    <span>
+                      Your love
+                    </span>
+                  </a>
+                </div>
+                <div class="col-6">
+                  <a href="#">
+                    <div class="icons">
+                      <i class="fas fa-shopping-basket"></i>
+                    </div>
+                    <span>
+                      You bought
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
     </section>
 
     <section id="section2">
@@ -126,6 +185,51 @@
           </div>
 
       </div>
+    </section>
+    <section>
+      <footer >
+        <div class="container">
+          <div class="row">
+            <div class="col-4 finfo">
+              <a href="#">privacy policy</a>
+              <a href="#">term  & condition</a>
+              <a href="#">about us</a>
+            </div>
+            <div class="col-4">
+              <h1>cosy</h1>
+              <h4>airconditioners</h4>
+              <div class="icon-footer row">
+                <a href="#" class="col-4"><img src="https://www.iconsdb.com/icons/preview/black/twitter-3-xl.png" alt=""></a>
+                <a href="#" class="col-4"><img src="https://www.iconsdb.com/icons/preview/black/pinterest-3-xl.png" alt=""></a>
+                <a href="#" class="col-4"><img src="https://www.iconsdb.com/icons/preview/black/instagram-xl.png" alt=""></a>
+              </div>
+              <div class="row">
+                <div class="col-6" id="div"></div>
+              </div>
+              <div class="container">
+                <p>weekly newsletter</p>
+                <input type="text" class="email" placeholder="name@email.com">
+                <a href="#"><div class="bor "> subscribe</div></a>
+              </div>
+              <div class="row icon-footer">
+                <a href="#" class="col-3"><img src="https://www.iconsdb.com/icons/preview/black/amex-xxl.png" alt=""></a>
+                <a href="#" class="col-3"><img src="https://www.iconsdb.com/icons/preview/black/paypal-3-xxl.png" alt=""></a>
+                <a href="#" class="col-3"><img src="https://www.iconsdb.com/icons/preview/black/mastercard-xxl.png" alt=""></a>
+                <a href="#" class="col-3"><img src="https://www.iconsdb.com/icons/preview/black/visa-xxl.png" alt=""></a>
+              </div>
+              <div class="copyright">
+                &copy 2019
+              </div>
+            </div>
+
+            <div class="col-4 finfo">
+              <a href="#">shipping info</a>
+              <a href="#">returns/exchanges</a>
+              <a href="#">contact</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </section>
 
 </body>
