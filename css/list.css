@@ -257,10 +257,11 @@ span{
   border-radius: 2vw;
 }
 .type-bg .feature{
-  background-color: rgb(120,220,100);
+  background-color: rgb(120,220,255);
   color: white;
   mix-blend-mode: multiply;
   font-size: 2.5vw;
+  border-radius: 20px;
 }
 .list-product .image{
   height:25vw;

@@ -225,6 +225,7 @@ a {
 }
 .carousel-control-prev{
   transform: translate(-100%,100%);
+
 }
 .feature-pro{
   position: relative;
