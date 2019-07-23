@@ -22,7 +22,7 @@
 <section>
   <nav class="navbar navbar-expand-md navbar-light">
     <div class="container">
-      <a class="navbar-brand" href="#">LOGO HERE</a>
+      <a class="navbar-brand" href="index.html"> <img src="img/logo.png" width="50px" alt=""> </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -33,25 +33,29 @@
             Menu
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#best-seller">Best seller</a>
+            <a class="dropdown-item" href="#trend">Trends</a>
+            <a class="dropdown-item" href="#popular">Popular</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="contact-us.html">Contact us</a>
+            <a class="dropdown-item" href="login.html">Login</a>
+            <a class="dropdown-item" href="register.html">Register</a>
           </div>
         </div>
         <div class="col-md-7">
           <form>
             <select class="input-select">
               <option value="0">Brands</option>
-              <option value="1">Samsung</option>
-              <option value="1">LG</option>
-              <option value="1">Daikin</option>
-              <option value="1">Panasonic</option>
-              <option value="1">Voltas</option>
-              <option value="1">Other...</option>
+              <option value="1"><a href="Panasonic.html">Samsung</a></option>
+              <option value="2"><a href="Panasonic.html">LG</a></option>
+              <option value="3"><a href="Panasonic.html">Daikin</a></option>
+              <option value="4"><a href="Panasonic.html">Panasonic</a></option>
+              <option value="5"><a href="Panasonic.html">Voltas</a></option>
+              <option value="6"><a href="Panasonic.html">Other...</a></option>
             </select>
             <input class="input" placeholder="Search here">
-            <button class="search-btn">Search</button>
+
+            <button type="button" name="button" class="search-btn"><a href="typeWindow.html" style="color: white">Search</a></button>
           </form>
         </div>
         <div class="col-md-3" style="text-align: center">
@@ -67,7 +71,7 @@
               </a>
             </div>
             <div class="col-6">
-              <a href="#">
+              <a href="cart.html">
                 <div class="icons">
                   <i class="fas fa-shopping-basket"></i>
                 </div>
@@ -136,7 +140,7 @@
       </div>
       <div class="col-lg-5 col-7" id="mid">
         <div class="info"style="font-size:3vw;" >
-          <p style="font-size:3vw;">Name of product</p>
+          <p style="font-size:3vw;">Name of product (This must be the one you love)</p>
           <div class="row">
             <div class="price col-6" style="text-align: center;font-size:3vw;">
               <h5>$499.00</h5>
@@ -147,25 +151,23 @@
             <div class="count" style="font-size: 0.8vw"></div>
           </div>
           <div style="border-top: solid #e4e7ed 1px;">
-            <h6>Size:</h6>
+            <h6 id="size">Size:</h6>
             <div class="row pickup">
-              <a href="#"><input type="button" name="" value="9.000 W" class="btn btn-info btn-sm" ></a>
-              <a href="#"><input type="button" name="" value="9.000 W" class="btn btn-info btn-sm" ></a>
-              <a href="#"><input type="button" name="" value="9.000 W" class="btn btn-info btn-sm" ></a>
+              <a href="#"><input type="button" name="" value="9.000 W" class="btn btn-info btn-sm size" ></a>
+              <a href="#"><input type="button" name="" value="10.000 W" class="btn btn-info btn-sm size" ></a>
+              <a href="#"><input type="button" name="" value="12.000 W" class="btn btn-info btn-sm size" ></a>
             </div>
           </div>
           <div>
-            <h6>Color</h6>
+            <h6 id="color">Color:</h6>
             <div class="row pickup">
-              <a href="#"><input type="button" name="" value="White" class="btn btn-info btn-sm" ></a>
-              <a href="#"><input type="button" name="" value="Black" class="btn btn-info btn-sm" ></a>
-              <a href="#"><input type="button" name="" value="Other" class="btn btn-info btn-sm" ></a>
+              <a href="#"><input type="button" name="" value="White" class="btn btn-info btn-sm color" ></a>
+              <a href="#"><input type="button" name="" value="Black" class="btn btn-info btn-sm color" ></a>
+              <a href="#"><input type="button" name="" value="Other" class="btn btn-info btn-sm color" ></a>
             </div>
           </div>
-          <div class="buy" style="font-size:2vw;">
-            <a href="#" class="btn btn-danger row" style="width: 7vw">Buy</a>
-            <a href="#" class="btn btn-danger row" style="width: 16vw">Add to Wishlist</a>
-            <a href="#" class="btn btn-danger row" style="width: 18vw">Add to Your cart</a>
+          <div class="buy" style="font-size:2vw">
+            <a href="cart.html" class="btn btn-danger row" style="width: 100px">Buy</a>
           </div>
         </div>
         <div class="row">
@@ -190,18 +192,20 @@
         5000 BTUS to cool small rooms up to 150 sq. ft. and features 3 cooling speeds and 3 fan speeds for customizable comfort just the way you like it. With the included EZ mount window installation kit, you'll be able to cool down your room in no
         time. Additional features include a one touch lift-out filter for easy cleaning, an electronic thermostat, 24-Hour On/Off Timer and remote control. With the GE 115 Volt Electronic Room Air Conditioner, powerful and efficient cooling is yours
         to command.</p>
-      <ul>
-        <li>Delivers 5,000 BTUs to cool small rooms up to 150 sq ft</li>
-        <li>Easy Mount window installation kit included.</li>
-        <li>Easy to operate controls with a digital thermostat</li>
-        <li>Maximum Cool - 2-way air direction, 3 cooling speeds & 3 fan speeds</li>
-        <li>Easy to clean air filter, recommended to clean every 30 days for best performance</li>
-        <li>Easy to operate digital controls with remote control</li>
-        <li>Sleep mode - Designed to allow you to sleep more comfortably by increasing the temperature throughout the night</li>
-        <li>Fixed chassis for window install only, Fits windows 23"- 38" wide, minimum height 12 1/2"</li>
-        <li>115 Volt Outlet Type</li>
-      </ul>
+      <div class="col-12">
+        <ul style="margin-left: 2em">
+          <li>Delivers 5,000 BTUs to cool small rooms up to 150 sq ft</li>
+          <li>Easy Mount window installation kit included.</li>
+          <li>Easy to operate controls with a digital thermostat</li>
+          <li>Maximum Cool - 2-way air direction, 3 cooling speeds & 3 fan speeds</li>
+          <li>Easy to clean air filter, recommended to clean every 30 days for best performance</li>
+          <li>Easy to operate digital controls with remote control</li>
+          <li>Sleep mode - Designed to allow you to sleep more comfortably by increasing the temperature throughout the night</li>
+          <li>Fixed chassis for window install only, Fits windows 23"- 38" wide, minimum height 12 1/2"</li>
+          <li>115 Volt Outlet Type</li>
+        </ul>
 
+      </div>
     </div>
   </div>
 </section>
@@ -356,6 +360,14 @@
     var y = $('.count');
 
     y[0].innerHTML = '(' + Math.floor(Math.random() * 800 + 10) + ')';
+  </script>
+  <script type="text/javascript">
+    $('.size').click(function(){
+      $('#size').html('Size: '+$(this).attr('value'));
+    })
+    $('.color').click(function(){
+      $('#color').html('Color: '+$(this).attr('value'));
+    })
   </script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
