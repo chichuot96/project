@@ -54,6 +54,10 @@ a {
   transform: skewX(-45deg) translateX(-100%);
 
 }
+.trend{
+  padding-top: 2vw;
+  background-color: #EEF5F9;
+}
 .slick-track,.list-trend{
   padding-bottom: 2vw;
 }
@@ -222,7 +226,23 @@ a {
 .carousel-control-prev{
   transform: translate(-100%,100%);
 }
-
+.feature-pro{
+  position: relative;
+  margin: 3vw;
+}
+#featured .image{
+  height: 20vw;
+  object-fit: cover;
+  object-position: center;
+}
+.feature-pro .feature{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  transform: translateY(-100%);
+  text-align: center;
+}
 @media (min-width: 576px) {
   .type-brand span{
     font-size: 4vw;

@@ -243,7 +243,7 @@ span{
 .table-quantity img{
   width:2vw;
 }
-.type-bg h3{
+.type-bg .h3{
   text-align: center;
   font-size: 4vw;
   position: absolute;
@@ -255,6 +255,12 @@ span{
   mix-blend-mode: multiply;
   padding: 2vw 0;
   border-radius: 2vw;
+}
+.type-bg .feature{
+  background-color: rgb(120,220,100);
+  color: white;
+  mix-blend-mode: multiply;
+  font-size: 2.5vw;
 }
 .list-product .image{
   height:25vw;
@@ -333,7 +339,7 @@ span{
     font-size: 2.5vw;
   }
   span{
-    font-size: 1.7vw;
+    font-size: 1.4vw;
   }
 
 
