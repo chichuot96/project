@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
   <link rel="stylesheet" href="css/list.css" >
+  <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/header.css">
   <style>
@@ -69,7 +70,7 @@
           <div class="col-md-3" style="text-align: center">
             <div class="row">
               <div class="col-6">
-                <a href="#">
+                <a href="typeWindow.html">
                   <div class="icons">
                     <i class="far fa-heart"></i>
                   </div>
@@ -79,7 +80,7 @@
                 </a>
               </div>
               <div class="col-6">
-                <a href="#">
+                <a href="typeWindow.html">
                   <div class="icons">
                     <i class="fas fa-shopping-basket"></i>
                   </div>
@@ -101,7 +102,7 @@
     <div class="ch-link">
       <a href="index.html" class="btn btn-info">Home</a>
       <i href="#" class="fa fa-angle-right btn "></i>
-      <a href="#" class="btn btn-info">Shopping cart</a>
+      <a href="typeWindow.html" class="btn btn-info">Shopping cart</a>
     </div>
   </div>
   <div class="container table-responsive">
@@ -115,519 +116,583 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
+        <tr id="product1" >
           <td class="table-img"><img src="https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6175/6175508_sd.jpg" width="80%" alt=""></td>
           <td class="table-name">LG-LW6017R</td>
           <td class="table-quantity">
             <div class="row">
-              <div class="col-6 q-left"><input class="quanti" type="number" name="quantity" placeholder="1" min="0"></div>
+              <div class="col-6 q-left"><input class="quanti" id="num" type="number" name="quantity" placeholder="1" min="0" value="1"></div>
               <div class="col-6">
-                <a href="" class="btn btn-success">
+                <button class="btn btn-success " id="reset">
                   <img src="https://www.iconsdb.com/icons/preview/white/available-updates-xxl.png" alt="">
-                </a>
-                <a href=""class="btn btn-danger">
+                </button>
+                <button class="btn btn-danger " id="delete">
                   <img src="https://www.iconsdb.com/icons/preview/white/x-mark-3-xxl.png" alt="">
-                </a>
+                </button>
               </div>
             </div>
 
           </td>
-          <td class="table-price">$219.99</td>
+          <td >$<span class="table-price"></span></td>
         </tr>
         <tr>
           <td class="" colspan="3">Total</td>
-          <td id="cart-total"></td>
+          <td >$<span class="cart-total"></span></td>
         </tr>
       </tbody>
     </table>
-    <div class="col-sm-6"></div>
-    <div id="purchase" class="col-sm-6" >
+    <div id="purchase" class="col-sm-6" style="float:right;border:1px solid #000;padding:20px;" >
       <div class="row" id="psave">
         <span class="col-7">Today's savings</span>
-        <span class="col-5">$250.00</span>
+        <span class="col-5">$<span id="save"></span></span>
       </div>
       <div class="row" id="ptotal">
         <span class="col-7">Product Total</span>
-        <span class="col-5">749.99</span>
+        <span class="col-5">$<span class="cart-total"></span></span>
       </div>
-      <a href="login.html" class="btn btn-success">Check out</a>
-      <span>Or pay with</span>
-      <a href="#" class="btn btn-secondary">Paypal</a>
+      <div id="payment" style="margin-left:30%">
+        <a href="login.html" class="btn btn-success">Check out</a>
+        <br><span>Or pay with</span><br>
+        <a href="typeWindow.html" class="btn btn-secondary">Paypal</a>
+      </div>
     </div>
   </div>
 
   <div class="container">
 
     <h3>Most-viewed items</h3>
-    <div id="mySlide" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#mySlide" data-slide-to="0" class="active"></li>
-        <li data-target="#mySlide" data-slide-to="1"></li>
-        <li data-target="#mySlide" data-slide-to="2"></li>
-        <li data-target="#mySlide" data-slide-to="3"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="row">
-            <div class="col-3">
-              <div class="product">
-                <div class="im">
-                  <img class="image" src="https://m.media-amazon.com/images/I/81Zu8EggjjL._AC_UL436_.jpg" width="100%" alt="">
-                  <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
-                  <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
-                  </div>
-                </div>
-                <div class="info">
-                  <a href="#" class="name">Voltas-185DZA</a>
-                  <div class="price">$499.00</div>
-                  <div class="star-rate">
-                    <div class="star-inner" ></div>
-                    <div class="count"></div>
-                  </div>
-                </div>
+    <div id="popular" class="container">
+  <h3>Popular product</h3>
+  <div id="popular-list" class="carousel slide" data-ride="carousel">
 
-                <div class="brand">
-                  <a href="#" class="btn btn-info link">Voltas</a>
-
-                  <a href="#" class="btn btn-info link">R-410A</a>
-                  <a href="#" class="btn btn-info link">Window</a>
-                  <a href="#" class="btn btn-danger link"> Heat & cool</a>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-4 col-6">
+            <div class="product row">
+              <div class="col-5 im">
+                <img src="https://2qaayg3yvidcn9imquz625sg-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/ductless-air-conditioner.jpg" class="image" alt="">
+                <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
+                <div class="basket">
+                  <a href="detail.html"><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
                 </div>
               </div>
-            </div>
-            <div class="col-3">
-              <div class="product">
-                <div class="im">
-                  <img class="image" src="https://m.media-amazon.com/images/I/81Zu8EggjjL._AC_UL436_.jpg" width="100%" alt="">
-                  <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
-                  <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
-                  </div>
+              <div class="col-7">
+                <h3>Voltas-185DZA</h3>
+                <div class="star-rate">
+                  <div class="star-inner" ></div>
+                  <div class="count"></div>
                 </div>
-                <div class="info">
-                  <a href="#" class="name">Voltas-185DZA</a>
-                  <div class="price">$499.00</div>
-                  <div class="star-rate">
-                    <div class="star-inner" ></div>
-                    <div class="count"></div>
-                  </div>
-                </div>
-                <div class="brand">
-                  <a href="#" class="btn btn-info link">Voltas</a>
-
-                  <a href="#" class="btn btn-info link">R-410A</a>
-                  <a href="#" class="btn btn-info link">Window</a>
-                  <a href="#" class="btn btn-danger link"> Heat & cool</a>
-                </div>
+                <div class="price">$499.00</div>
+              </div>
+              <div class="brand">
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Voltas</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">R-410A</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Window</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link"> Heat & cool</a>
+              </div>
+              <div class="add-cart">
+                <a href="cart.html" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
               </div>
             </div>
-            <div class="col-3">
-              <div class="product">
-                <div class="im">
-                  <img class="image" src="https://m.media-amazon.com/images/I/81Zu8EggjjL._AC_UL436_.jpg" width="100%" alt="">
-                  <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
-                  <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
-                  </div>
-                </div>
-                <div class="info">
-                  <a href="#" class="name">Voltas-185DZA</a>
-                  <div class="price">$499.00</div>
-                  <div class="star-rate">
-                    <div class="star-inner" ></div>
-                    <div class="count"></div>
-                  </div>
-                </div>
-                <div class="brand">
-                  <a href="#" class="btn btn-info link">Voltas</a>
-
-                  <a href="#" class="btn btn-info link">R-410A</a>
-                  <a href="#" class="btn btn-info link">Window</a>
-                  <a href="#" class="btn btn-danger link"> Heat & cool</a>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="product row">
+              <div class="col-5 im">
+                <img src="https://2qaayg3yvidcn9imquz625sg-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/ductless-air-conditioner.jpg" class="image" alt="">
+                <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
+                <div class="basket">
+                  <a href="detail.html"><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
                 </div>
               </div>
+              <div class="col-7">
+                <h3>Voltas-185DZA</h3>
+                <div class="star-rate">
+                  <div class="star-inner" ></div>
+                  <div class="count"></div>
+                </div>
+                <div class="price">$499.00</div>
+              </div>
+              <div class="brand">
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Voltas</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">R-410A</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Window</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link"> Heat & cool</a>
+              </div>
+              <div class="add-cart">
+                <a href="cart.html" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+              </div>
             </div>
-            <div class="col-3">
-              <div class="product">
-                <div class="im">
-                  <img class="image" src="https://m.media-amazon.com/images/I/81Zu8EggjjL._AC_UL436_.jpg" width="100%" alt="">
-                  <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
-                  <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
-                  </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="product row">
+              <div class="col-5 im">
+                <img src="https://2qaayg3yvidcn9imquz625sg-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/ductless-air-conditioner.jpg" class="image" alt="">
+                <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
+                <div class="basket">
+                  <a href="detail.html"><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
                 </div>
-                <div class="info">
-                  <a href="#" class="name">Voltas-185DZA</a>
-                  <div class="price">$499.00</div>
-                  <div class="star-rate">
-                    <div class="star-inner" ></div>
-                    <div class="count"></div>
-                  </div>
+              </div>
+              <div class="col-7">
+                <h3>Voltas-185DZA</h3>
+                <div class="star-rate">
+                  <div class="star-inner" ></div>
+                  <div class="count"></div>
                 </div>
-
-                <div class="brand">
-                  <a href="#" class="btn btn-info link">Voltas</a>
-
-                  <a href="#" class="btn btn-info link">R-410A</a>
-                  <a href="#" class="btn btn-info link">Window</a>
-                  <a href="#" class="btn btn-danger link"> Heat & cool</a>
+                <div class="price">$499.00</div>
+              </div>
+              <div class="brand">
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Voltas</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">R-410A</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Window</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link"> Heat & cool</a>
+              </div>
+              <div class="add-cart">
+                <a href="cart.html" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="product row">
+              <div class="col-5 im">
+                <img src="https://2qaayg3yvidcn9imquz625sg-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/ductless-air-conditioner.jpg" class="image" alt="">
+                <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
+                <div class="basket">
+                  <a href="detail.html"><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
                 </div>
+              </div>
+              <div class="col-7">
+                <h3>Voltas-185DZA</h3>
+                <div class="star-rate">
+                  <div class="star-inner" ></div>
+                  <div class="count"></div>
+                </div>
+                <div class="price">$499.00</div>
+              </div>
+              <div class="brand">
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Voltas</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">R-410A</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Window</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link"> Heat & cool</a>
+              </div>
+              <div class="add-cart">
+                <a href="cart.html" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="product row">
+              <div class="col-5 im">
+                <img src="https://2qaayg3yvidcn9imquz625sg-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/ductless-air-conditioner.jpg" class="image" alt="">
+                <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
+                <div class="basket">
+                  <a href="detail.html"><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
+                </div>
+              </div>
+              <div class="col-7">
+                <h3>Voltas-185DZA</h3>
+                <div class="star-rate">
+                  <div class="star-inner" ></div>
+                  <div class="count"></div>
+                </div>
+                <div class="price">$499.00</div>
+              </div>
+              <div class="brand">
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Voltas</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">R-410A</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Window</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link"> Heat & cool</a>
+              </div>
+              <div class="add-cart">
+                <a href="cart.html" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="product row">
+              <div class="col-5 im">
+                <img src="https://2qaayg3yvidcn9imquz625sg-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/ductless-air-conditioner.jpg" class="image" alt="">
+                <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
+                <div class="basket">
+                  <a href="detail.html"><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
+                </div>
+              </div>
+              <div class="col-7">
+                <h3>Voltas-185DZA</h3>
+                <div class="star-rate">
+                  <div class="star-inner" ></div>
+                  <div class="count"></div>
+                </div>
+                <div class="price">$499.00</div>
+              </div>
+              <div class="brand">
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Voltas</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">R-410A</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Window</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link"> Heat & cool</a>
+              </div>
+              <div class="add-cart">
+                <a href="cart.html" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
               </div>
             </div>
           </div>
         </div>
-        <div class="carousel-item " >
-          <div class="row">
-            <div class="col-3">
-              <div class="product">
-                <div class="im">
-                  <img class="image" src="https://m.media-amazon.com/images/I/81Zu8EggjjL._AC_UL436_.jpg" width="100%" alt="">
-                  <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
-                  <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
-                  </div>
-                </div>
-                <div class="info">
-                  <a href="#" class="name">Voltas-185DZA</a>
-                  <div class="price">$499.00</div>
-                  <div class="star-rate">
-                    <div class="star-inner" ></div>
-                    <div class="count"></div>
-                  </div>
-                </div>
-
-                <div class="brand">
-                  <a href="#" class="btn btn-info link">Voltas</a>
-
-                  <a href="#" class="btn btn-info link">R-410A</a>
-                  <a href="#" class="btn btn-info link">Window</a>
-                  <a href="#" class="btn btn-danger link"> Heat & cool</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="product">
-                <div class="im">
-                  <img class="image" src="https://m.media-amazon.com/images/I/81Zu8EggjjL._AC_UL436_.jpg" width="100%" alt="">
-                  <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
-                  <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
-                  </div>
-                </div>
-                <div class="info">
-                  <a href="#" class="name">Voltas-185DZA</a>
-                  <div class="price">$499.00</div>
-                  <div class="star-rate">
-                    <div class="star-inner" ></div>
-                    <div class="count"></div>
-                  </div>
-                </div>
-                <div class="brand">
-                  <a href="#" class="btn btn-info link">Voltas</a>
-
-                  <a href="#" class="btn btn-info link">R-410A</a>
-                  <a href="#" class="btn btn-info link">Window</a>
-                  <a href="#" class="btn btn-danger link"> Heat & cool</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="product">
-                <div class="im">
-                  <img class="image" src="https://m.media-amazon.com/images/I/81Zu8EggjjL._AC_UL436_.jpg" width="100%" alt="">
-                  <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
-                  <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
-                  </div>
-                </div>
-                <div class="info">
-                  <a href="#" class="name">Voltas-185DZA</a>
-                  <div class="price">$499.00</div>
-                  <div class="star-rate">
-                    <div class="star-inner" ></div>
-                    <div class="count"></div>
-                  </div>
-                </div>
-                <div class="brand">
-                  <a href="#" class="btn btn-info link">Voltas</a>
-
-                  <a href="#" class="btn btn-info link">R-410A</a>
-                  <a href="#" class="btn btn-info link">Window</a>
-                  <a href="#" class="btn btn-danger link"> Heat & cool</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="product">
-                <div class="im">
-                  <img class="image" src="https://m.media-amazon.com/images/I/81Zu8EggjjL._AC_UL436_.jpg" width="100%" alt="">
-                  <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
-                  <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
-                  </div>
-                </div>
-                <div class="info">
-                  <a href="#" class="name">Voltas-185DZA</a>
-                  <div class="price">$499.00</div>
-                  <div class="star-rate">
-                    <div class="star-inner" ></div>
-                    <div class="count"></div>
-                  </div>
-                </div>
-
-                <div class="brand">
-                  <a href="#" class="btn btn-info link">Voltas</a>
-
-                  <a href="#" class="btn btn-info link">R-410A</a>
-                  <a href="#" class="btn btn-info link">Window</a>
-                  <a href="#" class="btn btn-danger link"> Heat & cool</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item " >
-          <div class="row">
-            <div class="col-3">
-              <div class="product">
-                <div class="im">
-                  <img class="image" src="https://m.media-amazon.com/images/I/81Zu8EggjjL._AC_UL436_.jpg" width="100%" alt="">
-                  <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
-                  <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
-                  </div>
-                </div>
-                <div class="info">
-                  <a href="#" class="name">Voltas-185DZA</a>
-                  <div class="price">$499.00</div>
-                  <div class="star-rate">
-                    <div class="star-inner" ></div>
-                    <div class="count"></div>
-                  </div>
-                </div>
-
-                <div class="brand">
-                  <a href="#" class="btn btn-info link">Voltas</a>
-
-                  <a href="#" class="btn btn-info link">R-410A</a>
-                  <a href="#" class="btn btn-info link">Window</a>
-                  <a href="#" class="btn btn-danger link"> Heat & cool</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="product">
-                <div class="im">
-                  <img class="image" src="https://m.media-amazon.com/images/I/81Zu8EggjjL._AC_UL436_.jpg" width="100%" alt="">
-                  <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
-                  <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
-                  </div>
-                </div>
-                <div class="info">
-                  <a href="#" class="name">Voltas-185DZA</a>
-                  <div class="price">$499.00</div>
-                  <div class="star-rate">
-                    <div class="star-inner" ></div>
-                    <div class="count"></div>
-                  </div>
-                </div>
-                <div class="brand">
-                  <a href="#" class="btn btn-info link">Voltas</a>
-
-                  <a href="#" class="btn btn-info link">R-410A</a>
-                  <a href="#" class="btn btn-info link">Window</a>
-                  <a href="#" class="btn btn-danger link"> Heat & cool</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="product">
-                <div class="im">
-                  <img class="image" src="https://m.media-amazon.com/images/I/81Zu8EggjjL._AC_UL436_.jpg" width="100%" alt="">
-                  <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
-                  <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
-                  </div>
-                </div>
-                <div class="info">
-                  <a href="#" class="name">Voltas-185DZA</a>
-                  <div class="price">$499.00</div>
-                  <div class="star-rate">
-                    <div class="star-inner" ></div>
-                    <div class="count"></div>
-                  </div>
-                </div>
-                <div class="brand">
-                  <a href="#" class="btn btn-info link">Voltas</a>
-
-                  <a href="#" class="btn btn-info link">R-410A</a>
-                  <a href="#" class="btn btn-info link">Window</a>
-                  <a href="#" class="btn btn-danger link"> Heat & cool</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="product">
-                <div class="im">
-                  <img class="image" src="https://m.media-amazon.com/images/I/81Zu8EggjjL._AC_UL436_.jpg" width="100%" alt="">
-                  <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
-                  <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
-                  </div>
-                </div>
-                <div class="info">
-                  <a href="#" class="name">Voltas-185DZA</a>
-                  <div class="price">$499.00</div>
-                  <div class="star-rate">
-                    <div class="star-inner" ></div>
-                    <div class="count"></div>
-                  </div>
-                </div>
-
-                <div class="brand">
-                  <a href="#" class="btn btn-info link">Voltas</a>
-
-                  <a href="#" class="btn btn-info link">R-410A</a>
-                  <a href="#" class="btn btn-info link">Window</a>
-                  <a href="#" class="btn btn-danger link"> Heat & cool</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item " >
-          <div class="row">
-            <div class="col-3">
-              <div class="product">
-                <div class="im">
-                  <img class="image" src="https://m.media-amazon.com/images/I/81Zu8EggjjL._AC_UL436_.jpg" width="100%" alt="">
-                  <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
-                  <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
-                  </div>
-                </div>
-                <div class="info">
-                  <a href="#" class="name">Voltas-185DZA</a>
-                  <div class="price">$499.00</div>
-                  <div class="star-rate">
-                    <div class="star-inner" ></div>
-                    <div class="count"></div>
-                  </div>
-                </div>
-
-                <div class="brand">
-                  <a href="#" class="btn btn-info link">Voltas</a>
-
-                  <a href="#" class="btn btn-info link">R-410A</a>
-                  <a href="#" class="btn btn-info link">Window</a>
-                  <a href="#" class="btn btn-danger link"> Heat & cool</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="product">
-                <div class="im">
-                  <img class="image" src="https://m.media-amazon.com/images/I/81Zu8EggjjL._AC_UL436_.jpg" width="100%" alt="">
-                  <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
-                  <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
-                  </div>
-                </div>
-                <div class="info">
-                  <a href="#" class="name">Voltas-185DZA</a>
-                  <div class="price">$499.00</div>
-                  <div class="star-rate">
-                    <div class="star-inner" ></div>
-                    <div class="count"></div>
-                  </div>
-                </div>
-                <div class="brand">
-                  <a href="#" class="btn btn-info link">Voltas</a>
-
-                  <a href="#" class="btn btn-info link">R-410A</a>
-                  <a href="#" class="btn btn-info link">Window</a>
-                  <a href="#" class="btn btn-danger link"> Heat & cool</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="product">
-                <div class="im">
-                  <img class="image" src="https://m.media-amazon.com/images/I/81Zu8EggjjL._AC_UL436_.jpg" width="100%" alt="">
-                  <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
-                  <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
-                  </div>
-                </div>
-                <div class="info">
-                  <a href="#" class="name">Voltas-185DZA</a>
-                  <div class="price">$499.00</div>
-                  <div class="star-rate">
-                    <div class="star-inner" ></div>
-                    <div class="count"></div>
-                  </div>
-                </div>
-                <div class="brand">
-                  <a href="#" class="btn btn-info link">Voltas</a>
-
-                  <a href="#" class="btn btn-info link">R-410A</a>
-                  <a href="#" class="btn btn-info link">Window</a>
-                  <a href="#" class="btn btn-danger link"> Heat & cool</a>
-                </div>
-              </div>
-            </div>
-            <div class="col-3">
-              <div class="product">
-                <div class="im">
-                  <img class="image" src="https://m.media-amazon.com/images/I/81Zu8EggjjL._AC_UL436_.jpg" width="100%" alt="">
-                  <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
-                  <div class="sale"><span>sale 15%</span></div>
-                  <div class="basket">
-                    <a href=""><img  src="https://www.iconsdb.com/icons/preview/white/shopping-basket-xl.png" alt=""></a>
-                  </div>
-                </div>
-                <div class="info">
-                  <a href="#" class="name">Voltas-185DZA</a>
-                  <div class="price">$499.00</div>
-                  <div class="star-rate">
-                    <div class="star-inner" ></div>
-                    <div class="count"></div>
-                  </div>
-                </div>
-
-                <div class="brand">
-                  <a href="#" class="btn btn-info link">Voltas</a>
-
-                  <a href="#" class="btn btn-info link">R-410A</a>
-                  <a href="#" class="btn btn-info link">Window</a>
-                  <a href="#" class="btn btn-danger link"> Heat & cool</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#mySlide" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span></a>
-
-        <a class="carousel-control-next" href="#mySlide" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
       </div>
+      <div class="carousel-item " >
+        <div class="row">
+          <div class="col-md-4 col-6">
+            <div class="product row">
+              <div class="col-5 im">
+                <img src="https://2qaayg3yvidcn9imquz625sg-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/ductless-air-conditioner.jpg" class="image" alt="">
+                <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
+                <div class="basket">
+                  <a href="detail.html"><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
+                </div>
+              </div>
+              <div class="col-7">
+                <h3>Voltas-185DZA</h3>
+                <div class="star-rate">
+                  <div class="star-inner" ></div>
+                  <div class="count"></div>
+                </div>
+                <div class="price">$499.00</div>
+              </div>
+              <div class="brand">
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Voltas</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">R-410A</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Window</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link"> Heat & cool</a>
+              </div>
+              <div class="add-cart">
+                <a href="cart.html" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="product row">
+              <div class="col-5 im">
+                <img src="https://2qaayg3yvidcn9imquz625sg-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/ductless-air-conditioner.jpg" class="image" alt="">
+                <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
+                <div class="basket">
+                  <a href="detail.html"><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
+                </div>
+              </div>
+              <div class="col-7">
+                <h3>Voltas-185DZA</h3>
+                <div class="star-rate">
+                  <div class="star-inner" ></div>
+                  <div class="count"></div>
+                </div>
+                <div class="price">$499.00</div>
+              </div>
+              <div class="brand">
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Voltas</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">R-410A</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Window</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link"> Heat & cool</a>
+              </div>
+              <div class="add-cart">
+                <a href="cart.html" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="product row">
+              <div class="col-5 im">
+                <img src="https://2qaayg3yvidcn9imquz625sg-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/ductless-air-conditioner.jpg" class="image" alt="">
+                <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
+                <div class="basket">
+                  <a href="detail.html"><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
+                </div>
+              </div>
+              <div class="col-7">
+                <h3>Voltas-185DZA</h3>
+                <div class="star-rate">
+                  <div class="star-inner" ></div>
+                  <div class="count"></div>
+                </div>
+                <div class="price">$499.00</div>
+              </div>
+              <div class="brand">
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Voltas</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">R-410A</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Window</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link"> Heat & cool</a>
+              </div>
+              <div class="add-cart">
+                <a href="cart.html" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="product row">
+              <div class="col-5 im">
+                <img src="https://2qaayg3yvidcn9imquz625sg-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/ductless-air-conditioner.jpg" class="image" alt="">
+                <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
+                <div class="basket">
+                  <a href="detail.html"><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
+                </div>
+              </div>
+              <div class="col-7">
+                <h3>Voltas-185DZA</h3>
+                <div class="star-rate">
+                  <div class="star-inner" ></div>
+                  <div class="count"></div>
+                </div>
+                <div class="price">$499.00</div>
+              </div>
+              <div class="brand">
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Voltas</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">R-410A</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Window</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link"> Heat & cool</a>
+              </div>
+              <div class="add-cart">
+                <a href="cart.html" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="product row">
+              <div class="col-5 im">
+                <img src="https://2qaayg3yvidcn9imquz625sg-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/ductless-air-conditioner.jpg" class="image" alt="">
+                <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
+                <div class="basket">
+                  <a href="detail.html"><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
+                </div>
+              </div>
+              <div class="col-7">
+                <h3>Voltas-185DZA</h3>
+                <div class="star-rate">
+                  <div class="star-inner" ></div>
+                  <div class="count"></div>
+                </div>
+                <div class="price">$499.00</div>
+              </div>
+              <div class="brand">
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Voltas</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">R-410A</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Window</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link"> Heat & cool</a>
+              </div>
+              <div class="add-cart">
+                <a href="cart.html" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="product row">
+              <div class="col-5 im">
+                <img src="https://2qaayg3yvidcn9imquz625sg-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/ductless-air-conditioner.jpg" class="image" alt="">
+                <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
+                <div class="basket">
+                  <a href="detail.html"><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
+                </div>
+              </div>
+              <div class="col-7">
+                <h3>Voltas-185DZA</h3>
+                <div class="star-rate">
+                  <div class="star-inner" ></div>
+                  <div class="count"></div>
+                </div>
+                <div class="price">$499.00</div>
+              </div>
+              <div class="brand">
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Voltas</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">R-410A</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Window</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link"> Heat & cool</a>
+              </div>
+              <div class="add-cart">
+                <a href="cart.html" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item ">
+        <div class="row">
+          <div class="col-md-4 col-6">
+            <div class="product row">
+              <div class="col-5 im">
+                <img src="https://2qaayg3yvidcn9imquz625sg-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/ductless-air-conditioner.jpg" class="image" alt="">
+                <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
+                <div class="basket">
+                  <a href="detail.html"><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
+                </div>
+              </div>
+              <div class="col-7">
+                <h3>Voltas-185DZA</h3>
+                <div class="star-rate">
+                  <div class="star-inner" ></div>
+                  <div class="count"></div>
+                </div>
+                <div class="price">$499.00</div>
+              </div>
+              <div class="brand">
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Voltas</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">R-410A</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Window</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link"> Heat & cool</a>
+              </div>
+              <div class="add-cart">
+                <a href="cart.html" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="product row">
+              <div class="col-5 im">
+                <img src="https://2qaayg3yvidcn9imquz625sg-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/ductless-air-conditioner.jpg" class="image" alt="">
+                <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
+                <div class="basket">
+                  <a href="detail.html"><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
+                </div>
+              </div>
+              <div class="col-7">
+                <h3>Voltas-185DZA</h3>
+                <div class="star-rate">
+                  <div class="star-inner" ></div>
+                  <div class="count"></div>
+                </div>
+                <div class="price">$499.00</div>
+              </div>
+              <div class="brand">
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Voltas</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">R-410A</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Window</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link"> Heat & cool</a>
+              </div>
+              <div class="add-cart">
+                <a href="cart.html" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="product row">
+              <div class="col-5 im">
+                <img src="https://2qaayg3yvidcn9imquz625sg-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/ductless-air-conditioner.jpg" class="image" alt="">
+                <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
+                <div class="basket">
+                  <a href="detail.html"><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
+                </div>
+              </div>
+              <div class="col-7">
+                <h3>Voltas-185DZA</h3>
+                <div class="star-rate">
+                  <div class="star-inner" ></div>
+                  <div class="count"></div>
+                </div>
+                <div class="price">$499.00</div>
+              </div>
+              <div class="brand">
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Voltas</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">R-410A</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Window</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link"> Heat & cool</a>
+              </div>
+              <div class="add-cart">
+                <a href="cart.html" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="product row">
+              <div class="col-5 im">
+                <img src="https://2qaayg3yvidcn9imquz625sg-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/ductless-air-conditioner.jpg" class="image" alt="">
+                <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
+                <div class="basket">
+                  <a href="detail.html"><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
+                </div>
+              </div>
+              <div class="col-7">
+                <h3>Voltas-185DZA</h3>
+                <div class="star-rate">
+                  <div class="star-inner" ></div>
+                  <div class="count"></div>
+                </div>
+                <div class="price">$499.00</div>
+              </div>
+              <div class="brand">
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Voltas</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">R-410A</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Window</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link"> Heat & cool</a>
+              </div>
+              <div class="add-cart">
+                <a href="cart.html" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="product row">
+              <div class="col-5 im">
+                <img src="https://2qaayg3yvidcn9imquz625sg-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/ductless-air-conditioner.jpg" class="image" alt="">
+                <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
+                <div class="basket">
+                  <a href="detail.html"><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
+                </div>
+              </div>
+              <div class="col-7">
+                <h3>Voltas-185DZA</h3>
+                <div class="star-rate">
+                  <div class="star-inner" ></div>
+                  <div class="count"></div>
+                </div>
+                <div class="price">$499.00</div>
+              </div>
+              <div class="brand">
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Voltas</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">R-410A</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Window</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link"> Heat & cool</a>
+              </div>
+              <div class="add-cart">
+                <a href="cart.html" class="btn btn-danger"><span>Add to cart</span> <i class="fa fa-cart-plus"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-6">
+            <div class="product row">
+              <div class="col-5 im">
+                <img src="https://2qaayg3yvidcn9imquz625sg-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/ductless-air-conditioner.jpg" class="image" alt="">
+                <img class="hot" src="https://www.iconsdb.com/icons/preview/color/4080FF/new-badge-2-xxl.png" width="100%" alt="">
+                <div class="basket">
+                  <a href="detail.html"><img  src="https://www.iconsdb.com/icons/preview/white/eye-3-xxl.png" alt=""></a>
+                </div>
+              </div>
+              <div class="col-7">
+                <h3>Voltas-185DZA</h3>
+                <div class="star-rate">
+                  <div class="star-inner" ></div>
+                  <div class="count"></div>
+                </div>
+                <div class="price">$499.00</div>
+              </div>
+              <div class="brand">
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Voltas</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">R-410A</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link">Window</a>
+                <a href="typeWindow.html" class="btn btn-outline-info btn-sm link"> Heat & cool</a>
+              </div>
+              <div class="add-cart">
+                <a href="#" class="btn btn-outline-info btn-sm">
+                  <span>Add to cart</span>
+                  <i class="fa fa-cart-plus"></i>
+
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#popular-list" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span></a>
+
+      <a class="carousel-control-next" href="#popular-list" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
     </div>
+  </div>
+</div>
+
   </div>
 </section>
 <section>
@@ -635,17 +700,17 @@
     <div class="container">
       <div class="row">
         <div class="col-4 finfo">
-          <a href="#">privacy policy</a>
-          <a href="#">term  & condition</a>
-          <a href="#">about us</a>
+          <a href="typeWindow.html">privacy policy</a>
+          <a href="typeWindow.html">term  & condition</a>
+          <a href="typeWindow.html">about us</a>
         </div>
         <div class="col-4">
           <h1>cosy</h1>
           <h4>airconditioners</h4>
           <div class="icon-footer row">
-            <a href="#" class="col-4"><img src="https://www.iconsdb.com/icons/preview/black/twitter-3-xl.png" alt=""></a>
-            <a href="#" class="col-4"><img src="https://www.iconsdb.com/icons/preview/black/pinterest-3-xl.png" alt=""></a>
-            <a href="#" class="col-4"><img src="https://www.iconsdb.com/icons/preview/black/instagram-xl.png" alt=""></a>
+            <a href="typeWindow.html" class="col-4"><img src="https://www.iconsdb.com/icons/preview/black/twitter-3-xl.png" alt=""></a>
+            <a href="typeWindow.html" class="col-4"><img src="https://www.iconsdb.com/icons/preview/black/pinterest-3-xl.png" alt=""></a>
+            <a href="typeWindow.html" class="col-4"><img src="https://www.iconsdb.com/icons/preview/black/instagram-xl.png" alt=""></a>
           </div>
           <div class="row">
             <div class="col-6" id="div"></div>
@@ -653,13 +718,13 @@
           <div class="container">
             <p>weekly newsletter</p>
             <input type="text" class="email" placeholder="name@email.com">
-            <a href="#"><div class="bor "> subscribe</div></a>
+            <a href="typeWindow.html"><div class="bor "> subscribe</div></a>
           </div>
           <div class="row icon-footer">
-            <a href="#" class="col-3"><img src="https://www.iconsdb.com/icons/preview/black/amex-xxl.png" alt=""></a>
-            <a href="#" class="col-3"><img src="https://www.iconsdb.com/icons/preview/black/paypal-3-xxl.png" alt=""></a>
-            <a href="#" class="col-3"><img src="https://www.iconsdb.com/icons/preview/black/mastercard-xxl.png" alt=""></a>
-            <a href="#" class="col-3"><img src="https://www.iconsdb.com/icons/preview/black/visa-xxl.png" alt=""></a>
+            <a href="typeWindow.html" class="col-3"><img src="https://www.iconsdb.com/icons/preview/black/amex-xxl.png" alt=""></a>
+            <a href="typeWindow.html" class="col-3"><img src="https://www.iconsdb.com/icons/preview/black/paypal-3-xxl.png" alt=""></a>
+            <a href="typeWindow.html" class="col-3"><img src="https://www.iconsdb.com/icons/preview/black/mastercard-xxl.png" alt=""></a>
+            <a href="typeWindow.html" class="col-3"><img src="https://www.iconsdb.com/icons/preview/black/visa-xxl.png" alt=""></a>
           </div>
           <div class="copyright">
             &copy 2019
@@ -667,9 +732,9 @@
         </div>
 
         <div class="col-4 finfo">
-          <a href="#">shipping info</a>
-          <a href="#">returns/exchanges</a>
-          <a href="#">contact</a>
+          <a href="typeWindow.html">shipping info</a>
+          <a href="typeWindow.html">returns/exchanges</a>
+          <a href="typeWindow.html">contact</a>
         </div>
       </div>
     </div>
@@ -694,6 +759,35 @@
     for(var j=0;j<y.length;j++){
       y[j].innerHTML='('+Math.floor(Math.random()*800+10)+')';
     }
+</script>
+<script>
+  var price=249.99;
+  var listP=document.getElementsByClassName('table-price');
+  var save = document.getElementById('save');
+  var totalP=document.getElementsByClassName('cart-total');
+  for(var i=0;i<totalP.length;i++){
+    listP[0].innerHTML=price;
+    totalP[i].innerHTML=price;
+    save.innerHTML=Math.floor(price/10);
+  }
+  $('#reset').click(function(){
+    var n=$('#num').val();
+    price=249.99;
+    price*=n;
+    for(var i=0;i<totalP.length;i++){
+      listP[0].innerHTML=price;
+      totalP[i].innerHTML=price;
+      save.innerHTML=Math.floor(price/10);
+    }
+  })
+  $('#delete').click(function(){
+    $('#product1').css("display","none")
+    for(var i=0;i<totalP.length;i++){
+      totalP[i].innerHTML=0;
+      save.innerHTML=0;
+}
+  })
+
 </script>
 </body>
 
