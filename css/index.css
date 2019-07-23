@@ -230,6 +230,9 @@ a {
   position: relative;
   margin: 3vw;
 }
+#feature{
+  background-color:  #EEF5F9;
+}
 #featured .image{
   height: 20vw;
   object-fit: cover;
